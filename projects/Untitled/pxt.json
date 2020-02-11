@@ -1,0 +1,13 @@
+{
+    "name": "Untitled",
+    "description": "",
+    "dependencies": {
+        "adafruit-metro-m0-express": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "preferredEditor": "blocksprj"
+}

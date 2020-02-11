@@ -1,0 +1,17 @@
+{
+  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+  "input.buttonA0": "Button connecting A0 to GND.",
+  "input.buttonA1": "Button connecting A1 to GND.",
+  "input.buttonA2": "Button connecting A2 to GND.",
+  "input.buttonA3": "Button connecting A3 to GND.",
+  "input.buttonA4": "Button connecting A4 to GND.",
+  "input.buttonA5": "Button connecting A5 to GND.",
+  "input.touchA0": "Capacitive pin A0",
+  "input.touchA1": "Capacitive pin A1",
+  "input.touchA2": "Capacitive pin A2",
+  "input.touchA3": "Capacitive pin A3",
+  "input.touchA4": "Capacitive pin A4",
+  "input.touchA5": "Capacitive pin A5",
+  "jacdac": "A Joint Asynchronous Communications, Device Agnostic Control.",
+  "jacdac.touchButtonsService": "A service that exposes the state of all tattoo buttons"
+}

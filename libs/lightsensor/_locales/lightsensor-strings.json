@@ -1,0 +1,12 @@
+{
+  "LightCondition.Bright|block": "bright",
+  "LightCondition.Dark|block": "dark",
+  "input.lightLevel|block": "light level",
+  "input.onLightConditionChanged|block": "on light %condition",
+  "input.setLightThreshold|block": "set %condition| light threshold to %value",
+  "input|block": "input",
+  "jacdac.lightSensorService|block": "light sensor service",
+  "{id:category}Input": "Input",
+  "{id:category}Jacdac": "Jacdac",
+  "{id:group}More": "More"
+}

@@ -1,0 +1,7 @@
+{
+  "net.getJSON|block": "get json $url",
+  "net.getString|block": "get string $url",
+  "net.ping|block": "net ping $dest",
+  "net|block": "net",
+  "{id:category}Net": "Net"
+}

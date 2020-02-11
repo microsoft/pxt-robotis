@@ -1,0 +1,12 @@
+{
+  "PromixityEvent.Close|block": "close",
+  "PromixityEvent.Far|block": "far",
+  "input.distance|block": "distance",
+  "input|block": "input",
+  "jacdac.proximityService|block": "proximity service",
+  "jacdac|block": "jacdac",
+  "{id:category}Input": "Input",
+  "{id:category}Jacdac": "Jacdac",
+  "{id:category}Sensors": "Sensors",
+  "{id:category}Vl53l0x": "Vl53l0x"
+}

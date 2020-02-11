@@ -1,0 +1,13 @@
+{
+  "mqtt.ConnectFlags": "Connect flags\nhttp://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc385349229",
+  "mqtt.ConnectReturnCode": "Connect Return code\nhttp://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc385349256",
+  "mqtt.Constants": "Optimization, the TypeScript compiler replaces the constant enums.",
+  "mqtt.ControlPacketType": "MQTT Control Packet type\nhttp://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc353481061",
+  "mqtt.IConnectionOptions": "The options used to connect to the MQTT broker.",
+  "mqtt.IMessage": "A message received in a Publish packet.",
+  "mqtt.Protocol.createConnect": "CONNECT - Client requests a connection to a Server\nhttp://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc398718028",
+  "mqtt.Protocol.createPingReq": "PINGREQ - PING request\nhttp://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc384800454",
+  "mqtt.Protocol.createPubAck": "PUBACK - Publish acknowledgement\nhttp://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc384800416",
+  "mqtt.Protocol.createPublish": "PUBLISH - Publish message\nhttp://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc384800410",
+  "mqtt.Protocol.createSubscribe": "SUBSCRIBE - Subscribe to topics\nhttp://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc384800436"
+}

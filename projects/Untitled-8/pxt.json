@@ -1,0 +1,14 @@
+{
+    "name": "Untitled",
+    "description": "",
+    "dependencies": {
+        "adafruit-metro-m0-express": "*",
+        "robotis-cm-300": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md"
+    ],
+    "preferredEditor": "blocksprj"
+}

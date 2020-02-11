@@ -1,0 +1,6 @@
+{
+  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+  "input.lightSpectrum": "Uses a light spectrum sensor to capture the light spectrum range",
+  "input.onLightSpectrumConditionChanged": "Register code to run when the light condition changed",
+  "input.onLightSpectrumConditionChanged|param|event": "@param handler"
+}

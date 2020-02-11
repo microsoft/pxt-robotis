@@ -1,0 +1,16 @@
+{
+  "jacdac.lcdService|block": "lcd service",
+  "jacdac|block": "jacdac",
+  "lcd.clear|block": "lcd clear",
+  "lcd.setBlink|block": "lcd set blink %enabled",
+  "lcd.setCursor|block": "lcd set curcor %enabled",
+  "lcd.setDisplay|block": "lcd set display %enabled",
+  "lcd.showNumber|block": "lcd show number %value at line %line",
+  "lcd.showString|block": "lcd show string %text at line %line",
+  "lcd.showValue|block": "lcd show value %name: %text at line %line",
+  "lcd|block": "lcd",
+  "{id:category}Jacdac": "Jacdac",
+  "{id:category}Lcd": "Lcd",
+  "{id:group}Configuration": "Configuration",
+  "{id:group}Display": "Display"
+}

@@ -1,0 +1,9 @@
+{
+  "input.lightColor|block": "light color",
+  "input|block": "input",
+  "jacdac.colorSensorService|block": "color sensor service",
+  "{id:category}Input": "Input",
+  "{id:category}Jacdac": "Jacdac",
+  "{id:category}Sensors": "Sensors",
+  "{id:group}Color Sensor": "Color Sensor"
+}

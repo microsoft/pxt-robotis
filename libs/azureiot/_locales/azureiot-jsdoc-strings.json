@@ -1,0 +1,8 @@
+{
+  "azureiot.connect": "Connects to the IoT hub",
+  "azureiot.isConnected": "Indicates if the MQTT client is connected",
+  "azureiot.onEvent": "Registers code when the MQTT client gets connected or disconnected",
+  "azureiot.onEvent|param|event": "@param handler ",
+  "azureiot.onMessageReceived": "Registers code to run when a message is received",
+  "azureiot.publishMessage": "Send a message via mqtt"
+}

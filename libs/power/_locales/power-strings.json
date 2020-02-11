@@ -1,0 +1,8 @@
+{
+  "power.checkDeepSleep|block": "power check deep sleep",
+  "power.deepSleep|block": "power deep sleep",
+  "power.poke|block": "power poke",
+  "power.setDeepSleepTimeout|block": "power set deep sleep timeout to %seconds s",
+  "power|block": "power",
+  "{id:category}Power": "Power"
+}

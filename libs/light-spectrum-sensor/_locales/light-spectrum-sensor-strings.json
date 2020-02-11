@@ -1,0 +1,9 @@
+{
+  "input.lightSpectrum|block": "light $range spectrum",
+  "input|block": "input",
+  "jacdac.lightSpectrumSensorService|block": "color sensor service",
+  "{id:category}Input": "Input",
+  "{id:category}Jacdac": "Jacdac",
+  "{id:category}Sensors": "Sensors",
+  "{id:group}Light Spectrum Sensor": "Light Spectrum Sensor"
+}

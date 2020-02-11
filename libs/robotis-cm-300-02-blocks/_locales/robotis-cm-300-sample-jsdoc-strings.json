@@ -1,0 +1,8 @@
+{
+  "basic.print": "Print text on LCD",
+  "basic.printIcon": "Print text on LCD",
+  "basic.printNum": "Print text on LCD",
+  "basic.print|param|text": "text to print",
+  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+  "input.isPressed": "Check if a button is pressed or not."
+}

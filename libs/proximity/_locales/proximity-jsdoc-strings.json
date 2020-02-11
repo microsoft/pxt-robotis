@@ -1,0 +1,10 @@
+{
+  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+  "input.distance": "Gets the distance measured by the proximity sensor",
+  "input.onDistanceEvent": "Registers a distance event",
+  "input.onDistanceEvent|param|event": "@param handler",
+  "jacdac": "A Joint Asynchronous Communications, Device Agnostic Control.",
+  "jacdac.proximityService": "Gets the JACDAC proximity host service",
+  "sensors.PromixitySensor.onDistanceEvent": "Registers an event when a level is detected",
+  "sensors.PromixitySensor.onDistanceEvent|param|event": "@param handler"
+}

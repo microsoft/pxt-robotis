@@ -1,0 +1,17 @@
+{
+  "Button.isPressed|block": "%button|is pressed",
+  "Button.onEvent|block": "on %button|%event",
+  "Button.wasPressed|block": "%button|was pressed",
+  "ButtonEvent.Click|block": "click",
+  "ButtonEvent.Down|block": "down",
+  "ButtonEvent.LongClick|block": "long click",
+  "ButtonEvent.Up|block": "up",
+  "jacdac.attachButtonToController|block": "jacdac attach $button to controller $controllerButton",
+  "jacdac|block": "jacdac",
+  "{id:category}Button": "Button",
+  "{id:category}DigitalInOutPin": "DigitalInOutPin",
+  "{id:category}Input": "Input",
+  "{id:category}Jacdac": "Jacdac",
+  "{id:group}Controller": "Controller",
+  "{id:group}More": "More"
+}

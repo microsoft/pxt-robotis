@@ -1,0 +1,12 @@
+{
+  "input.buttonA0|block": "button A0",
+  "input.buttonA1|block": "button A1",
+  "input.buttonA2|block": "button A2",
+  "input.buttonA3|block": "button A3",
+  "input.buttonA4|block": "button A4",
+  "input.buttonA5|block": "button A5",
+  "input|block": "input",
+  "{id:category}Config": "Config",
+  "{id:category}Input": "Input",
+  "{id:category}Pins": "Pins"
+}

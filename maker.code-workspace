@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../pxt"
+		},
+		{
+			"path": "../jacdac-ts"
+		},
+		{
+			"path": "../pxt-common-packages"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../jacdac-ts"
+		}
+	]
+}

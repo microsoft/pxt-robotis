@@ -1,0 +1,5 @@
+{
+  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+  "input.lightColor": "Uses a color sensor to capture the ambient color as a RGB value.",
+  "sensors.ColorSensor.color": "Reads an RGB color from the sensor"
+}

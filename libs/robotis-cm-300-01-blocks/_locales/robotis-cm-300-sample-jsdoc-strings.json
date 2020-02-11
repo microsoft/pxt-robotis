@@ -1,0 +1,17 @@
+{
+  "basic.forever2": "Repeats the code forever in the background. On each iteration, allows other codes to run.",
+  "basic.pause2": "Pause for the specified time in milliseconds",
+  "basic.pause2|param|ms": "how long to pause for, eg: 100, 200, 500, 1000, 2000",
+  "basic.print": "Print text on LCD",
+  "basic.printDrawing": "Print text on LCD",
+  "basic.printIcon": "Print text on LCD",
+  "basic.printNum": "Print text on LCD",
+  "basic.print|param|text": "text to print",
+  "communication.isPressed": "Check if a button is pressed or not.",
+  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
+  "input.isPressed": "Check if a button is pressed or not.",
+  "logic.isPressed": "Check if a button is pressed or not.",
+  "loops.isPressed": "Check if a button is pressed or not.",
+  "music.isPressed": "Check if a button is pressed or not.",
+  "output.isPressed": "Check if a button is pressed or not."
+}
