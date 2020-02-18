@@ -1,0 +1,1 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="device_gesture_event" x="0" y="0"><field name="NAME">Gesture.Shake</field></block><block type="buttonIsPressed03" disabled="true" x="10" y="70"><field name="button">input.buttonAB</field></block></xml>
