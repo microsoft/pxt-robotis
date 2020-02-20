@@ -17,7 +17,7 @@ namespace basic {
      * @param text text to print
      */
     //% help=basic/print/print
-    //% block="#print %img icon"
+    //% block="#print %img (icon UI)"
     //% blockId=rcm300_printIcon
     //% weight=1 blockGap=8
     export function printIcon(img: number): void {
@@ -29,7 +29,7 @@ namespace basic {
      * @param text text to print
      */
     //% help=basic/print/print
-    //% block="#print %img drawing"
+    //% block="#print %img (drawing UI)"
     //% blockId=rcm300_printDrawing
     //% weight=1 blockGap=8
     export function printDrawing(img: number): void {
@@ -127,39 +127,123 @@ namespace input {
     export function readJoystick(joystick: Joystick): number {
         return 0;
     }
-} // namespace ButtonMethods
 
-//% color=#5C2D91 weight=900 icon="\uf205"
-namespace music {
+    /**
+     * Read Working time
+     */
+    //% help=basic/clear-screen weight=1
+    //% blockId=rcm300_readWorkingTime block="#Working time"
+    //% weight=1 blockGap=8
+    export function readWorkingTime(joystick: Joystick): number {
+        return 0;
+    }
+
     /**
      * Check if a button is pressed or not.
      * @param button the button to query the request
      */
     //% help=input/button/is-pressed
-    //% block="#%button|is pressed#"
-    //% blockId=buttonIsPressed02
+    //% block="#Joystick %joystick| is pressed"
+    //% blockId=rcm300_isJoysticPressed
     //% weight=50 blockGap=8
     //% trackArgs=0
-    export function isPressed(x: Button): boolean {
+    export function isJoysticPressed(joystick: Button): boolean {
+        // return button->isPressed();
+        return true;
+    }
+
+    /**
+     * Check if a button is pressed or not.
+     * @param button the button to query the request
+     */
+    //% help=input/button/is-pressed
+    //% block="#Controller is %controller"
+    //% blockId=rcm300_isController
+    //% weight=50 blockGap=8
+    //% trackArgs=0
+    export function isController(controller: Gesture): boolean {
         // return button->isPressed();
         return true;
     }
 } // namespace ButtonMethods
 
 //% color=#5C2D91 weight=900 icon="\uf205"
+namespace music {
+    /**
+     * Print text on LCD
+     * @param text text to print
+     */
+    //% help=basic/print/print
+    //% block="#Record sound for %sec second(s)"
+    //% blockId=rcm300_recordSound
+    //% weight=1 blockGap=8
+    //% sec.defl=5 sec.min=1 sec.max=10
+    export function recordSound(sec: number): void {
+        
+    }
+
+    /**
+     * Print text on LCD
+     * @param text text to print
+     */
+    //% help=basic/print/print
+    //% block="#Play recorded sound for %sec second(s)"
+    //% blockId=rcm300_playRecordedSound
+    //% weight=1 blockGap=8
+    //% sec.defl=5 sec.min=1 sec.max=10
+    export function playRecordedSound(sec: number): void {
+        
+    }
+
+    /**
+     * Read sound count
+     */
+    //% help=basic/clear-screen weight=1
+    //% blockId=rcm300_readSoundDetectedCount block="#Sound detected count value"
+    //% weight=1 blockGap=8
+    export function readSoundDetectedCount(): number {
+        return 0;
+    }
+
+    /**
+     * Read sound count
+     */
+    //% help=basic/clear-screen weight=1
+    //% blockId=rcm300_readSoundDetectingCount block="#Sound detecting count value"
+    //% weight=1 blockGap=8
+    export function readSoundDetectingCount(): number {
+        return 0;
+    }
+} // namespace ButtonMethods
+
+enum Screen_Color {
+    Gray,
+    Color
+}
+
+//% color=#5C2D91 weight=900 icon="\uf205"
 namespace output {
     /**
-     * Check if a button is pressed or not.
-     * @param button the button to query the request
+     * Print text on LCD
+     * @param text text to print
      */
-    //% help=input/button/is-pressed
-    //% block="#%button|is pressed#"
-    //% blockId=buttonIsPressed03
-    //% weight=50 blockGap=8
-    //% trackArgs=0
-    export function isPressed(x: Button): boolean {
-        // return button->isPressed();
-        return true;
+    //% help=basic/print/print
+    //% block="#Set screen brightness to %bright"
+    //% blockId=rcm300_setScreenBrightness
+    //% weight=1 blockGap=8
+    //% bright.defl=50 bright.min=1 bright.max=100
+    export function setScreenBrightness(bright: number): void {
+        
+    }
+
+    /**
+     * Read sound count
+     */
+    //% help=basic/clear-screen weight=1
+    //% blockId=rcm300_setScreenColor block="#Set screen mode to %color"
+    //% weight=1 blockGap=8
+    export function setScreenColor(color: Screen_Color): void {
+
     }
 } // namespace ButtonMethods
 

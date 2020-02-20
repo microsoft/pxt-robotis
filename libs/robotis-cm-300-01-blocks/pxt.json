@@ -3,7 +3,9 @@
     "description": "Button A and B drivers",
     "files": [
         "README.md",
-        "sample.cpp",
+        "melodies.ts",
+        "music.ts",
+        "sample.cpp",        
         "sample.ts",
         "enums.d.ts",
         "shims.d.ts"
