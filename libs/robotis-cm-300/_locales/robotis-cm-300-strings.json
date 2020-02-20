@@ -1,7 +1,7 @@
 {
-  "input.buttonAB|block": "button AB",
-  "input.buttonA|block": "button A",
-  "input.buttonB|block": "button B",
+  "input.buttonAB|block": "button ALL",
+  "input.buttonA|block": "button START",
+  "input.buttonB|block": "button MODE",
   "{id:category}Config": "Config",
   "{id:category}Input": "Input",
   "{id:category}Pins": "Pins"

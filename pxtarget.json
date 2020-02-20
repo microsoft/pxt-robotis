@@ -10,18 +10,13 @@
         "libs/base",
         "libs/base---light",
         "libs/core",
-        "libs/core---stm32",
         "libs/core---nrf52",
-        "libs/core---samd",
-        "libs/core---samd51",
         "libs/screen---st7735",
         "libs/pulse",
         "libs/infrared",
         "libs/game",
         "libs/mixer",
         "libs/mixer---none",
-        "libs/mixer---samd",
-        "libs/mixer---stm32",
         "libs/pixel",
         "libs/buttons",
         "libs/touch",
@@ -60,12 +55,7 @@
         "libs/azureiot",
         "libs/settings",
         "libs/settings---files",
-        "libs/robotis-cm-300",
-        "libs/robotis-cm-300-01",
-        "libs/robotis-cm-300-01-blocks",
-        "libs/robotis-cm-300-02",
-        "libs/robotis-cm-300-02-blocks",
-        "libs/adafruit-circuit-playground-express"
+        "libs/robotis-cm-300"
     ],
     "serial": {
         "useHF2": true,
@@ -279,6 +269,36 @@
                 },
                 "dockerImage": "pext/yotta:latest",
                 "codalBinary": "CIRCUIT_PLAYGROUND"
+            }
+        },
+        "cm300": {
+            "serial": {
+                "useHF2": true
+            },
+            "compile": {
+                "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/nrf52.cfg]",
+                "flashChecksumAddr": 0,
+                "useUF2": true,
+                "webUSB": false,
+                "uf2Family": "0xada52840"                
+            },
+            "compileService": {
+                "codalTarget": {
+                    "name": "codal-cm300",
+                    "url": "https://github.com/ROBOTIS-GIT/codal-cm300.git",
+                    "branch": "develop",
+                    "type": "git"
+                },
+                "codalBinary": "CM300",
+                "serviceId": "codal2cm300",
+                "dockerImage": "pext/yotta:latest",
+                "yottaConfig": {
+                    "pxt": {
+                        "board": {
+                            "id": "BOARD_ID_CM300"
+                        }
+                    }
+                }
             }
         }
     },
