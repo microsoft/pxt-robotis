@@ -1,1 +1,0 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" x="0" y="0"/><block type="forever" x="176" y="0"/><block type="device_pause2" disabled="true" x="50" y="210"><value name="pause"><shadow type="timePicker"><field name="ms">100</field></shadow></value></block></xml>
