@@ -12,6 +12,7 @@
     "compileServiceVariant": "nrf52840",
     "dependencies": {
         "buttons": "file:../buttons",
+        "accelerometer": "file:../accelerometer",
         "robotis-cm-300-01-blocks": "file:../robotis-cm-300-01-blocks",
         "core---nrf52": "file:../core---nrf52"
     },
