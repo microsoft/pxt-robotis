@@ -11,13 +11,6 @@ JACDAC  is a single wire broadcast protocol for the plug and play of microcontro
 ```codecard
 [
     {
-        "name": "pixel blink",
-        "url": "/projects/jacdac/pixel-blink",
-        "description": "Remotely blink the pixel on a board",
-        "cardType": "example",
-        "otherActions": []
-    },
-    {
         "name": "broadcast",
         "url": "/projects/jacdac/broadcast",
         "description": "Broadcast a message and blink",
@@ -57,5 +50,4 @@ JACDAC  is a single wire broadcast protocol for the plug and play of microcontro
 
 ## See Also
 
-[pixel-blink](/projects/jacdac/pixel-blink),
 [broadcast](/projects/jacdac/broadcast),

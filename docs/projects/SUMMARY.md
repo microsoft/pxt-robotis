@@ -36,7 +36,6 @@
   * [Send Number](/projects/radio/send-number)
   * [Send String](/projects/radio/send-string)
 * [JACDAC](/projects/jacdac)
-  * [pixel blink](/projects/jacdac/pixel-blink)
   * [broadcast](/projects/jacdac/broadcast)
   * [console](/projects/jacdac/console)
   * [console screen](/projects/jacdac/console-screen)
