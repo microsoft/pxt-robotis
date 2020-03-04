@@ -1,8 +1,0 @@
-/*******************************
-         Site Overrides
-*******************************/
-
-
-.ui.menu.inverted .item {
-    text-transform: uppercase;
-}

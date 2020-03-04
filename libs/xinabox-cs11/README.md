@@ -1,4 +1,0 @@
-# XinaBox
-
-XinaBox CS11.
-
