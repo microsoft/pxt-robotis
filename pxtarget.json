@@ -1,0 +1,237 @@
+{
+    "id": "robotis",
+    "platformid": "codal",
+    "nickname": "ROBOTIS",
+    "name": "MakeCode ROBOTIS (Cortex class)",
+    "title": "MakeCode ROBOTIS - Blocks / Javascript editor",
+    "description": "A Blocks / JavaScript code editor for MakeCode ROBOTIS Boards",
+    "corepkg": "core",
+    "bundleddirs": [
+        "libs/base",
+        "libs/base---light",
+        "libs/core",
+        "libs/core---nrf52",
+        "libs/screen---st7735",
+        "libs/pulse",
+        "libs/infrared",
+        "libs/game",
+        "libs/mixer",
+        "libs/mixer---none",
+        "libs/mixer---nrf52",
+        "libs/buttons",
+        "libs/gamepad",
+        "libs/display",
+        "libs/storage",
+        "libs/serial",
+        "libs/jacdac",
+        "libs/jacdac-services",
+        "libs/jacdac-game",
+        "libs/datalogger",
+        "libs/lightsensor",
+        "libs/accelerometer",
+        "libs/microphone",
+        "libs/power",
+        "libs/lcd",
+        "libs/color",
+        "libs/color-sensor",
+        "libs/settings",
+        "libs/settings---files",
+        "libs/radio",
+        "libs/radio-broadcast"
+    ],
+    "serial": {
+        "useHF2": true,
+        "useEditor": true,
+        "log": true,
+        "editorTheme": {
+            "graphBackground": "#d9d9d9",
+            "lineColors": [
+                "#CC2936",
+                "#FFC914",
+                "#2EB7ED",
+                "#FB48C7",
+                "#08415C",
+                "#C200C0"
+            ]
+        }
+    },
+    "simulator": {
+        "autoRun": true,
+        "streams": false,
+        "aspectRatio": 1.0,
+        "parts": true,
+        "partsAspectRatio": 0.69,
+        "dynamicBoardDefinition": true
+    },
+    "cloud": {
+        "workspace": false,
+        "packages": true,
+        "sharing": true,
+        "thumbnails": true,
+        "publishing": true,
+        "importing": true,
+        "preferredPackages": [],
+        "githubPackages": true,
+        "cloudProviders": {
+            "github": {}
+        }
+    },
+    "runtime": {
+        "mathBlocks": true,
+        "loopsBlocks": true,
+        "logicBlocks": true,
+        "variablesBlocks": true,
+        "textBlocks": true,
+        "listsBlocks": true,
+        "functionBlocks": true,
+        "functionsOptions": {
+            "useNewFunctions": true,
+            "extraFunctionEditorTypes": []
+        },
+        "onStartNamespace": "loops",
+        "onStartColor": "#40bf4a",
+        "onStartWeight": 100,
+        "pauseUntilBlock": {},
+        "breakBlock": true,
+        "continueBlock": true
+    },
+    "appTheme": {
+        "accentColor": "#ecf0f1",
+        "backgroundColor": "#ffffff",
+        "logoUrl": "https://github.com/microsoft/pxt-robotis",
+        "logo": "./static/logo.svg",
+        "docsLogo": "./static/logo.svg",
+        "docsHeader": "Microsoft MakeCode ROBOTIS",
+        "portraitLogo": "./static/logo.svg",
+        "footerLogo": "./static/logo.svg",
+        "organization": "Microsoft MakeCode",
+        "organizationUrl": "https://makecode.com/",
+        "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
+        "organizationWideLogo": "./static/Microsoft-logo_rgb_c-gray.png",
+        "homeUrl": "https://robotis.makecode.com/",
+        "embedUrl": "https://robotis.makecode.com/",
+        "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
+        "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
+        "githubUrl": "https://github.com/microsoft/pxt-robotis",
+        "feedbackUrl": "https://forum.makecode.com/",
+        "betaUrl": "https://github.com/microsoft/pxt-robotis",
+        "boardName": "board",
+        "homeScreenHero": "./static/hero.jpg",
+        "debugger": true,
+        "print": true,
+        "chooseBoardOnNewProject": true,
+        "lightToc": true,
+        "instructions": true,
+        "docMenu": [
+            {
+                "name": "About",
+                "path": "/about"
+            },
+            {
+                "name": "Forum",
+                "path": "https://forum.makecode.com"
+            },
+            {
+                "name": "Boards",
+                "path": "/boards"
+            },
+            {
+                "name": "Blocks",
+                "path": "/blocks"
+            },
+            {
+                "name": "JavaScript",
+                "path": "/javascript"
+            },
+            {
+                "name": "Reference",
+                "path": "/reference"
+            },
+            {
+                "name": "GitHub",
+                "path": "https://github.com/microsoft/pxt-robotis"
+            }
+        ],
+        "invertedMenu": false,
+        "invertedToolbox": false,
+        "invertedMonaco": false,
+        "monacoToolbox": true,
+        "highContrast": true,
+        "greenScreen": true,
+        "simAnimationEnter": "fly right in",
+        "simAnimationExit": "fly right out",
+        "hasAudio": true,
+        "usbDocs": "/device/usb",
+        "disableBlockIcons": true,
+        "disableAPICache": true,
+        "blocklyOptions": {
+            "grid": {
+                "spacing": 20,
+                "length": 2,
+                "colour": "rgba(189, 195, 199, 0.20)",
+                "snap": true
+            }
+        },
+        "blockColors": {
+            "loops": "#40bf4a",
+            "logic": "#4cbfe6",
+            "math": "#9966ff",
+            "variables": "#FF6680",
+            "text": "#ffab19",
+            "advanced": "#00272B",
+            "functions": "#005a9e",
+            "arrays": "#8A1C7C"
+        },
+        "allowPackageExtensions": true,
+        "extendEditor": true,
+        "crowdinProject": "kindscript",
+        "scriptManager": true,
+        "simScreenshot": true,
+        "simGif": true,
+        "qrCode": true,
+        "python": true,
+        "pythonToolbox": true,
+        "addNewTypeScriptFile": true,
+        "alwaysGithubItemBlocks": true,
+        "alwaysGithubItem": true,
+        "githubBlocksDiff": true,
+        "nameProjectFirst": true,
+        "showProjectSettings": true,
+        "selectLanguage": true,
+        "githubEditor": true,
+        "tutorialBlocksDiff": true,
+        "tutorialExplicitHints": true,
+        "chooseLanguageRestrictionOnNewProject": true,
+        "openProjectNewTab": true,
+        "availableLocales": [
+            "en",
+            "ar",
+            "cs",
+            "da",
+            "de",
+            "el",
+            "es-ES",
+            "fi",
+            "fr",
+            "hu",
+            "is",
+            "it",
+            "ja",
+            "ko",
+            "nl",
+            "no",
+            "pt-BR",
+            "pt-PT",
+            "ru",
+            "si-LK",
+            "sk",
+            "sv-SE",
+            "tr",
+            "uk",
+            "zh-CN",
+            "zh-TW"
+        ]
+    },
+    "ignoreDocsErrors": true,
+    "uploadDocs": true
+}

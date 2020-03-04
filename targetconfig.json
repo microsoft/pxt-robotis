@@ -1,0 +1,30 @@
+{
+    "packages": {
+        "approvedOrgs": [
+            "Microsoft"
+        ],
+        "approvedRepos": [
+            "ROBOTIS-GIT/pxt-robotis"
+        ],
+        "preferredRepos": [
+            "ROBOTIS-GIT/pxt-robotis"
+        ]
+    },
+    "galleries": {
+        "Digital IO": "/projects/digital-io",
+        "Analog IO": "/projects/analog-io",
+        "Music": "/projects/music",
+        "Screen": "/projects/screen",
+        "Accelerometer": "/projects/accelerometer",
+        "Serial": "/projects/serial",
+        "Storage": "/projects/storage",
+        "LCD": "/projects/lcd",
+        "Power": "/projects/power",
+        "Bit Radio": "/projects/radio",
+        "JACDAC": "/projects/jacdac",
+        "Boards": "/boards"
+    },
+    "firmwareUrls": {
+
+    }
+}
