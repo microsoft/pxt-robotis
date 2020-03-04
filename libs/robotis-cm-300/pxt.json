@@ -1,0 +1,25 @@
+{
+    "name": "robotis-cm-300",
+    "description": "ROBOTIS CM-300 - beta",
+    "files": [
+        "README.md",
+        "device.d.ts",
+        "config.ts",
+        "board.json",
+        "board.svg"
+    ],
+    "core": true,
+    "compileServiceVariant": "cm300",
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52",
+        "buttons": "file:../buttons",
+        "serial": "file:../serial"
+    },
+    "public": true,
+    "dalDTS": {
+        "corePackage": "../core---nrf52"
+    },    
+    "features": [  
+
+    ]
+}
