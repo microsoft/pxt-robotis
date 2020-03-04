@@ -1,23 +1,23 @@
 {
-    "name": "pxt-maker",
-    "version": "0.13.16",
-    "description": "Microsoft MakeCode Maker Boards",
+    "name": "pxt-robotis",
+    "version": "0.0.1",
+    "description": "Microsoft MakeCode ROBOTIS Boards",
     "public": true,
     "keywords": [
         "JavaScript",
         "education",
-        "maker",
+        "robotis",
         "pxt",
         "MakeCode",
         "Microsoft"
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/microsoft/pxt-maker.git"
+        "url": "git+https://github.com/microsoft/pxt-robotis.git"
     },
     "author": "",
     "license": "MIT",
-    "homepage": "https://github.com/microsoft/pxt-maker#readme",
+    "homepage": "https://github.com/microsoft/pxt-robotis#readme",
     "files": [
         "README.md",
         "pxtarget.json",

@@ -4,11 +4,8 @@
         "accelerometer": "file:../accelerometer",
         "buttons": "file:../buttons",
         "jacdac": "file:../jacdac",
-        "light": "file:../light",
         "lightsensor": "file:../lightsensor",
         "screen---st7735": "file:../screen---st7735",
-        "switch": "file:../switch",
-        "thermometer": "file:../thermometer",
         "lcd": "file:../lcd",
         "mixer---nrf52": "file:../mixer---nrf52"
     }

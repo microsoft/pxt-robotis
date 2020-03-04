@@ -1,3 +1,0 @@
-# Adafruit Circuit Playground Bluefruit
-
-
