@@ -1,9 +1,0 @@
-{
-  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
-  "input.buttonA0": "Button connecting A0 to GND.",
-  "input.buttonA1": "Button connecting A1 to GND.",
-  "input.buttonA2": "Button connecting A2 to GND.",
-  "input.buttonA3": "Button connecting A3 to GND.",
-  "input.buttonA4": "Button connecting A4 to GND.",
-  "input.buttonA5": "Button connecting A5 to GND."
-}

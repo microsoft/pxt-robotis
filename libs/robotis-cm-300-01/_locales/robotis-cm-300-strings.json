@@ -1,8 +1,0 @@
-{
-  "input.buttonAB|block": "button AB",
-  "input.buttonA|block": "button A",
-  "input.buttonB|block": "button B",
-  "{id:category}Config": "Config",
-  "{id:category}Input": "Input",
-  "{id:category}Pins": "Pins"
-}
