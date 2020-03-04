@@ -1,7 +1,0 @@
-{
-  "jacdac": "A Joint Asynchronous Communications, Device Agnostic Control.",
-  "jacdac.servosService": "Gets the jacdac service for the servo A1",
-  "servos": "Servos\n\nControl micro servos\n\nControl micro servos",
-  "servos.servoA1": "A servo mounted on pin A1",
-  "servos.servoA2": "A servo mounted on pin A2"
-}
