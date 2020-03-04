@@ -30,6 +30,7 @@
         "libs/accelerometer",
         "libs/microphone",
         "libs/power",
+        "libs/pulse",
         "libs/lcd",
         "libs/color",
         "libs/color-sensor",
