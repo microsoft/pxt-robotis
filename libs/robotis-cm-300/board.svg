@@ -1256,7 +1256,7 @@
     <g stroke-width="1.417" stroke="none" stroke-opacity="1" fill-opacity="1" stroke-linejoin="miter" stroke-miterlimit="4" stroke-dasharray="none" paint-order="markers fill stroke" transform="translate(-64.69 -431.809)" id="breadboard">
       <rect x="325.984" y="654.803" width="2.835" id="connector0pin" fill="#e6e6e6" height="2.835" ry="5.669" rx="0" opacity="1"/>
       <rect x="317.48" y="654.803" width="2.835" id="connector1pin" fill="#e6e6e6" height="2.835" ry="5.669" rx="0" opacity="1"/>
-      <rect x="318.898" y="654.803" width="8.504" id="LED1" fill="#d5b705" height="2.835" ry="5.669" rx="0" opacity="1"/>
+      <rect x="318.898" y="654.803" width="8.504" id="LED" fill="#d5b705" height="2.835" ry="5.669" rx="0" opacity="1"/>
     </g>
   </g>
   <g transform="translate(-131.895 -72.308)">

@@ -1509,7 +1509,7 @@
     <g  gorn="0.3.0.0.0.0.0" style="display:inline">
      <rect  x="325.984" gorn="0.3.0.0.0.0.0.0" stroke-width="1.41732" stroke="none" y="654.803" style="opacity:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke" width="2.83464" stroke-opacity="1" id="connector0pin" fill-opacity="1" fill="#e6e6e6" height="2.83464" ry="5.66929" rx="5.66929e-08"/>
      <rect  x="317.48" gorn="0.3.0.0.0.0.0.1" stroke-width="1.41732" stroke="none" y="654.803" style="opacity:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke" width="2.83464" stroke-opacity="1" id="connector1pin" fill-opacity="1" fill="#e6e6e6" height="2.83464" ry="5.66929" rx="5.66929e-08"/>
-     <rect  x="318.898" gorn="0.3.0.0.0.0.0.2" stroke-width="1.41732" stroke="none" y="654.803" style="opacity:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke" width="8.5039" stroke-opacity="1" id="LED1" fill-opacity="1" fill="#d5b705" height="2.83463" ry="5.66929" rx="5.66929e-08"/>
+     <rect  x="318.898" gorn="0.3.0.0.0.0.0.2" stroke-width="1.41732" stroke="none" y="654.803" style="opacity:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke" width="8.5039" stroke-opacity="1" id="LED" fill-opacity="1" fill="#d5b705" height="2.83463" ry="5.66929" rx="5.66929e-08"/>
     </g>
    </g>
   </g>

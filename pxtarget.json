@@ -168,7 +168,7 @@
                     "type": "git"
                 },
                 "codalBinary": "CM300",
-                "serviceId": "codal2cm300",
+                "serviceId": "codal2nrf52840",
                 "dockerImage": "pext/yotta:latest",
                 "yottaConfig": {
                     "pxt": {

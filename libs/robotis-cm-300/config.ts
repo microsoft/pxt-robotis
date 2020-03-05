@@ -1,5 +1,5 @@
 namespace config {
-    export const PIN_LED1 = DAL.P1_4; 
+    export const PIN_LED = DAL.P1_4; 
 
     export const PIN_BTN_A = DAL.P1_10; //START BUTTON
     export const PIN_BTN_B = DAL.P1_13; //MODE BUTTON

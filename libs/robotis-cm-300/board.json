@@ -92,7 +92,7 @@
         "w": 8.503994053626759,
         "h": 2.834998350717509,
         "color": "#ff0000",
-        "label": "LED1"
+        "label": "LED"
       },
       {
         "x": 122.3129912325388,
@@ -168,7 +168,7 @@
     "B": "BTN_B",
     "RESETBTN": "RESETBTN",
     "LIGHTSENSOR": "LIGHTSENSOR",
-    "LED1": "LED1",
+    "LED": "LED",
     "IRRXLED": "IRRXLED",
     "IRTXLED": "IRTXLED",
     "IRRXLED1": "IRRXLED1",
