@@ -10,7 +10,7 @@ Displays the JACDAC console log on a TFT screen.
 
 ```blocks
 let logging = false
-input.buttonD1.onEvent(ButtonEvent.Click, function () {
+input.buttonA.onEvent(ButtonEvent.Click, function () {
     if (logging) {
         jacdac.consoleService().consoleMode = jacdac.JDConsoleMode.Off; 
         logging = false
@@ -34,7 +34,7 @@ jacdac
 
 ```config
 feature=uf2
-feature=buttond1
+feature=buttonA
 feature=screen
 feature=jacdac
 ```

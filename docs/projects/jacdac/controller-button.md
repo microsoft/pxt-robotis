@@ -9,7 +9,7 @@ JACDAC  is a single wire broadcast protocol for the plug and play of microcontro
 Binds the behavior of a button to the JACDAC controller client button. Connects directly to an arcade game.
 
 ```blocks
-jacdac.attachButtonToController(input.buttonD1, JDControllerButton.A)
+jacdac.attachButtonToController(input.buttonA, JDControllerButton.A)
 ```
 
 ```package
@@ -19,6 +19,6 @@ buttons
 
 ```config
 feature=uf2
-feature=buttond1
+feature=buttonA
 feature=jacdac
 ```

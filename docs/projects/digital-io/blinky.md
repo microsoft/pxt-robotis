@@ -14,11 +14,11 @@ forever(function() {
 
 ## Step 1 @fullscreen
 
-Add a ``||pins:digital write||`` to turn the ``D0`` pin ``LOW``.
+Add a ``||pins:digital write||`` to turn the ``LED`` pin ``LOW``.
 
 ```blocks
 forever(function() {
-    pins.D0.digitalWrite(false)
+    pins.LED.digitalWrite(false)
 })
 ```
 
@@ -35,9 +35,9 @@ Make sure the digital write is **HIGH**.
 
 ```blocks
 forever(function() {
-    pins.D0.digitalWrite(false)
+    pins.LED.digitalWrite(false)
     pause(500)
-    pins.D0.digitalWrite(true)
+    pins.LED.digitalWrite(true)
     pause(500)    
 })
 ```
@@ -56,5 +56,5 @@ Click on the **wrench** icon under the simulator to get detailed breadboarding i
 
 ```config
 feature=uf2
-feature=pind0
+feature=led
 ```

@@ -1,3 +1,4 @@
 # Boards
 
-* [Add a new board](/boards/add-a-new-board)
+* [ROBOTIS](/boards/robotis)
+    * [CM-300](/boards/robotis-cm-300)

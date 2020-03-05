@@ -7,8 +7,8 @@ This editor supports various ROBOTIS boards, based on NRF52.
 ```codecard
 [
     {
-        "name": "Add your board",
-        "url": "/boards/add-a-new-board",
+        "name": "ROBOTIS",
+        "url": "/boards/robotis",
         "imageUrl": "/static/libs/robotis.jpg"
     }
 ]
@@ -16,4 +16,4 @@ This editor supports various ROBOTIS boards, based on NRF52.
 
 ## See Also
 
-[Add a new board](/boards/add-a-new-board)
+[ROBOTIS](/boards/robotis)
