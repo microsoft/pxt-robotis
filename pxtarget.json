@@ -157,7 +157,7 @@
                     "branch": "develop",
                     "type": "git"
                 },
-                "codalBinary": "CM300",
+                "codalBinary": "NRF52840_DK",
                 "serviceId": "codal2nrf52840",
                 "dockerImage": "pext/yotta:latest"
             }
