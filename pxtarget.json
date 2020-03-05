@@ -2,9 +2,9 @@
     "id": "robotis",
     "platformid": "codal",
     "nickname": "ROBOTIS",
-    "name": "MakeCode ROBOTIS (Cortex class)",
-    "title": "MakeCode ROBOTIS - Blocks / Javascript editor",
-    "description": "A Blocks / JavaScript code editor for MakeCode ROBOTIS Boards",
+    "name": "MakeCode for ROBOTIS",
+    "title": "MakeCode for ROBOTIS",
+    "description": "A Microsoft MakeCode for ROBOTIS Boards using Blocks / Python / JavaScript",
     "corepkg": "core",
     "bundleddirs": [
         "libs/base",
@@ -165,11 +165,11 @@
         "logoUrl": "https://github.com/microsoft/pxt-robotis",
         "logo": "./static/logo.svg",
         "docsLogo": "./static/logo.svg",
-        "docsHeader": "Microsoft MakeCode ROBOTIS",
+        "docsHeader": "Microsoft MakeCode for ROBOTIS",
         "portraitLogo": "./static/logo.svg",
         "footerLogo": "./static/logo.svg",
-        "organization": "Microsoft MakeCode",
-        "organizationUrl": "https://makecode.com/",
+        "organization": "ROBOTIS",
+        "organizationUrl": "https://robotis.us/",
         "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
         "organizationWideLogo": "./static/Microsoft-logo_rgb_c-gray.png",
         "homeUrl": "https://robotis.makecode.com/",
@@ -183,9 +183,9 @@
         "homeScreenHero": "./static/hero.jpg",
         "debugger": true,
         "print": true,
-        "chooseBoardOnNewProject": true,
+        "chooseBoardOnNewProject": false,
         "lightToc": true,
-        "instructions": true,
+        "instructions": false,
         "docMenu": [
             {
                 "name": "About",
@@ -194,10 +194,6 @@
             {
                 "name": "Forum",
                 "path": "https://forum.makecode.com"
-            },
-            {
-                "name": "Boards",
-                "path": "/boards"
             },
             {
                 "name": "Blocks",
@@ -227,7 +223,6 @@
         "hasAudio": true,
         "usbDocs": "/device/usb",
         "disableBlockIcons": true,
-        "disableAPICache": true,
         "blocklyOptions": {
             "grid": {
                 "spacing": 20,
@@ -297,5 +292,5 @@
         ]
     },
     "ignoreDocsErrors": true,
-    "uploadDocs": true
+    "uploadDocs": false
 }

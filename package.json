@@ -1,7 +1,7 @@
 {
     "name": "pxt-robotis",
     "version": "0.0.3",
-    "description": "Microsoft MakeCode ROBOTIS Boards",
+    "description": "Microsoft MakeCode for ROBOTIS Boards",
     "public": true,
     "keywords": [
         "JavaScript",
