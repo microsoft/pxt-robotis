@@ -154,7 +154,7 @@
                     "type": "git"
                 },
                 "codalBinary": "NRF52840_DK",
-                "serviceId": "codal2nrf52840",
+                "serviceId": "codal2robotis",
                 "dockerImage": "pext/yotta:latest"
             }
         }
