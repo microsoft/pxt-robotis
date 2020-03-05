@@ -17,11 +17,11 @@ enum JacDacMessage {
     message1 = 49434
 }
 jacdac.onReceivedMessage(JacDacMessage.blink, function () {
-    pins.D1.digitalWrite(true)
+    pins.LED.digitalWrite(true)
     pause(100)
-    pins.D1.digitalWrite(false)
+    pins.LED.digitalWrite(false)
 })
-input.buttonD0.onEvent(ButtonEvent.Down, function () {
+input.buttonA.onEvent(ButtonEvent.Down, function () {
     jacdac.sendMessage(JacDacMessage.blink)
 })
 ```
@@ -33,7 +33,7 @@ jacdac-services
 
 ```config
 feature=uf2
-feature=buttond0
-feature=pind1
+feature=buttonA
+feature=led
 feature=jacdac
 ```

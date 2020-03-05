@@ -6,7 +6,6 @@
         "jacdac": "file:../jacdac",
         "lightsensor": "file:../lightsensor",
         "screen---st7735": "file:../screen---st7735",
-        "lcd": "file:../lcd",
         "mixer---nrf52": "file:../mixer---nrf52"
     }
 }

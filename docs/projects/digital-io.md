@@ -24,25 +24,6 @@
         "videoUrl": "/static/projects/digital-io/button-led/gallery.mp4",
         "description": "Learn about button events",
         "otherActions": []
-    },
-    {
-        "name": "Switch LED",
-        "url": "/projects/digital-io/switch-led",
-        "cardType": "tutorial",
-        "imageUrl": "/static/projects/digital-io/switch-led/gallery.png",
-        "largeImageUrl": "/static/projects/digital-io/switch-led/gallery.gif",
-        "videoUrl": "/static/projects/digital-io/switch-led/gallery.mp4",
-        "description": "Learn about digital read",
-        "otherActions": []
-    },
-    {
-        "name": "Multi Blinky",
-        "url": "/projects/digital-io/multi-blinky",
-        "imageUrl": "/static/projects/digital-io/switch-led/gallery.png",
-        "largeImageUrl": "/static/projects/digital-io/switch-led/gallery.gif",
-        "videoUrl": "/static/projects/digital-io/switch-led/gallery.mp4",
-        "cardType": "example",
-        "otherActions": []
     }
 ]
 ```
@@ -50,6 +31,4 @@
 ## See Also
 
 [Blinky](/projects/digital-io/blinky),
-[Button LED](/projects/digital-io/button-led),
-[Switch LED](/projects/digital-io/switch-led),
-[Multi Blinky](/projects/digital-io/multi-blinky)
+[Button LED](/projects/digital-io/button-led)

@@ -3,7 +3,7 @@
 Display the console output on a screen.
 
 ```typescript
-input.buttonD0.onEvent(ButtonEvent.Click, function () {
+input.buttonA.onEvent(ButtonEvent.Click, function () {
     console.log("hello")
 })
 display.showConsole()
@@ -14,7 +14,7 @@ console.log("say hello")
 ```config
 feature=uf2
 feature=screen
-feature=buttond1
+feature=buttonA
 ```
 ```package
 screen---st7735

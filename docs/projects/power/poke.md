@@ -9,7 +9,7 @@ forever(function() {
     power.checkDeepSleep();
     pause(1000);
 })
-input.buttonD0.onEvent(ButtonEvent.Click, function () {
+input.buttonA.onEvent(ButtonEvent.Click, function () {
     power.poke();
 })
 ```
@@ -21,5 +21,5 @@ power
 
 ```config
 feature=power
-feature=buttonD0
+feature=buttonA
 ```

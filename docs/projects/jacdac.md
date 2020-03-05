@@ -37,13 +37,6 @@ JACDAC  is a single wire broadcast protocol for the plug and play of microcontro
         "description": "Bind a push button to a JACDAC controller button",
         "cardType": "example",
         "otherActions": []
-    },
-    {
-        "name": "LCD screen",
-        "url": "/projects/jacdac/lcd-screen",
-        "description": "Display a message on a LCD screen",
-        "cardType": "example",
-        "otherActions": []
     }
 ]
 ```
