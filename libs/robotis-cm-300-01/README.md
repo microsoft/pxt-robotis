@@ -1,4 +1,0 @@
-# ROBOTIS   
-
-The ROBOTIS library.
-

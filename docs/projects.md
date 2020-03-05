@@ -17,36 +17,11 @@
         "videoUrl": "/static/projects/analog-io/blink-to-light/gallery.mp4"
     },
     {
-        "name": "Pixel",
-        "url": "/projects/pixel",
-        "imageUrl": "/static/projects/pixel/blinky/gallery.png",
-        "largeImageUrl": "/static/projects/pixel/blinky/gallery.gif",
-        "videoUrl": "/static/projects/pixel/blinky/gallery.mp4"
-    },
-    {
-        "name": "Light",
-        "url": "/projects/light",
-        "imageUrl": "/static/projects/light/rainbow/gallery.png",
-        "largeImageUrl": "/static/projects/light/rainbow/gallery.gif",
-        "videoUrl": "/static/projects/light/rainbow/gallery.mp4"
-    },
-    {
         "name": "Music",
         "url": "/projects/music",
         "imageUrl": "/static/projects/music/play-sound/gallery.png",
         "largeImageUrl": "/static/projects/music/play-sound/gallery.gif",
         "videoUrl": "/static/projects/music/play-sound/gallery.mp4"
-    },
-    {
-        "name": "Servos",
-        "url": "/projects/servos",
-        "imageUrl": "/static/projects/servos/sweep/gallery.png",
-        "largeImageUrl": "/static/projects/servos/sweep/gallery.gif",
-        "videoUrl": "/static/projects/servos/sweep/gallery.mp4"
-    },
-    {
-        "name": "HID",
-        "url": "/projects/hid"
     },
     {
         "name": "Screen",
@@ -78,12 +53,12 @@
         "videoUrl": "/static/projects/lcd/hello-world/gallery.mp4"
     },
     {
-        "name": "LoRa",
-        "url": "/projects/lora"
-    },
-    {
         "name": "Power",
         "url": "/projects/power"
+    },
+    {
+        "name": "Bit Radio",
+        "url": "/projects/radio"
     },
     {
         "name": "JACDAC",
@@ -92,7 +67,7 @@
     {
         "name": "Boards",
         "url": "/boards",
-        "imageUrl": "/static/libs/adafruit-circuit-playground-express.jpg"
+        "imageUrl": "/static/libs/robotis.jpg"
     }
 ]
 ```
@@ -101,18 +76,14 @@
 
 [Digital IO](/projects/digital-io),
 [Analog IO](/projects/analog-io),
-[Pixel](/projects/pixel),
-[Light](/projects/light),
 [Music](/projects/music),
-[Servos](/projects/servos),
-[HID](/projects/hid),
 [Screen](/projects/screen),
 [Accelerometer](/projects/accelerometer),
 [Serial](/projects/serial),
 [Storage](/projects/storage),
 [LCD](/projects/lcd),
-[LoRa](/projects/lora),
 [Power](/projects/power),
+[Bit Radio](/projects/radio),
 [JACDAC](/projects/jacdac),
 [Boards](/boards)
 
