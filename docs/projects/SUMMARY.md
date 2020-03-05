@@ -42,4 +42,5 @@
   * [controller button](/projects/jacdac/controller-button)
   * [LCD screen](/projects/jacdac/lcd-screen)
 * [Boards](/boards)
+  * [ROBOTIS](/boards/robotis)
   * [Add your board](/boards/add-a-new-board)
