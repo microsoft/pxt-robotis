@@ -1,5 +1,7 @@
 # MakeCode ROBOTIS [![Actions Status](https://github.com/microsoft/pxt-robotis/workflows/pxt-buildtarget/badge.svg)](https://github.com/microsoft/pxt-robotis/actions)
 
+Live at https://5d8c71b7-aa36-4a68-a9cb-288b989efb08.pxt.io/
+
 This is an experimental code editor for ROBOTIS boards.
 **The installation guide below is written for internal developers. To be changed later.**
 
