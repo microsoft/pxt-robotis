@@ -1,4 +1,4 @@
 # Boards
 
 * [ROBOTIS](/boards/robotis)
-    * [CM-300](/boards/robotis-cm300)
+    * [CM-300](/boards/robotis-cm-300)
