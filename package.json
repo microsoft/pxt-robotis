@@ -1,6 +1,6 @@
 {
     "name": "pxt-robotis",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Microsoft MakeCode ROBOTIS Boards",
     "public": true,
     "keywords": [
