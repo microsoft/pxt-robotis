@@ -115,17 +115,7 @@
                     "robotis-cm": "robotis-cm-300"
                 }
             }
-        ],
-        "patches": {
-            "0.0.0 - 0.6.8": [
-                {
-                    "type": "package",
-                    "map": {
-                        "arduino-mkr": "arduino-mkr1000"
-                    }
-                }
-            ]
-        }
+        ]
     },
     "compileService": {
         "buildEngine": "codal",
@@ -169,14 +159,7 @@
                 },
                 "codalBinary": "CM300",
                 "serviceId": "codal2nrf52840",
-                "dockerImage": "pext/yotta:latest",
-                "yottaConfig": {
-                    "pxt": {
-                        "board": {
-                            "id": "BOARD_ID_CM300"
-                        }
-                    }
-                }
+                "dockerImage": "pext/yotta:latest"
             }
         }
     },
