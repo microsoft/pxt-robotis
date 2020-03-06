@@ -387,3 +387,5 @@ lib/
 _locales
 
 **/*.DS_Store
+
+.project
