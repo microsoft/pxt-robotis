@@ -1,0 +1,26 @@
+{
+    "name": "robotis-cm-300-01-blocks",
+    "description": "robotis-cm-300-01-blocks for test",
+    "files": [
+        "README.md",
+        "enums.d.ts",
+        "shims.d.ts",
+        "melodies.ts",
+        "music.ts",
+        "basic.cpp",
+        "basic.ts",
+        "input.ts",
+        "output.ts",
+        "communication.ts",
+        "dynamixel.cpp"
+    ],
+    "testFiles": [
+        
+    ],
+    "public": true,
+    "dependencies": {
+        "screen---st7735": "file:../screen---st7735",
+        "core": "file:../core",
+        "jacdac": "file:../jacdac"
+    }
+}

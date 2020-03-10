@@ -34,7 +34,8 @@
         "libs/settings---files",
         "libs/radio",
         "libs/radio-broadcast",
-        "libs/robotis-cm-300"
+        "libs/robotis-cm-300",
+        "libs/robotis-cm-300-blocks"
     ],
     "serial": {
         "useHF2": true,
