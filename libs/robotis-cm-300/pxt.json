@@ -13,7 +13,8 @@
     "dependencies": {
         "core---nrf52": "file:../core---nrf52",
         "buttons": "file:../buttons",
-        "serial": "file:../serial"
+        "serial": "file:../serial",
+        "dynamixel": "file:../dynamixel"
     },
     "public": true,
     "dalDTS": {

@@ -14,32 +14,9 @@ namespace config {
     //Communication
     export const PIN_RX = DAL.P0_27;
     export const PIN_TX = DAL.P0_26;
+
+    export const PIN_DXL_RX = DAL.P0_8;
+    export const PIN_DXL_TX = DAL.P0_7;
+    export const PIN_DXL_DIR = DAL.P1_14;
+    export const PIN_DXL_PWR = DAL.P1_8;
 }
-
-
-// export const PIN_BTN_A = DAL.?;
-// // unknown pin id BTN
-// // unknown pin id A
-// // unknown pin id BTN_AB
-// // unknown pin id AB
-// export const PIN_BTN_B = DAL.?;
-// // unknown pin id B
-// // unknown pin id RESETBTN
-// // unknown pin id LIGHTSENSOR
-// export const PIN_LED1 = DAL.?;
-// export const PIN_IRRXLED = DAL.?;
-// export const PIN_IRTXLED = DAL.?;
-// // unknown pin id IRRXLED1
-// // unknown pin id IRTXLED1
-// export const PIN_MICROPHONE = DAL.?;
-// export const PIN_D1 = DAL.?;
-// export const PIN_A1 = DAL.?;
-// export const PIN_MOSI = DAL.?;
-// export const PIN_MISO = DAL.?;
-// export const PIN_SCK = DAL.?;
-// export const PIN_TX = DAL.?;
-// export const PIN_RX = DAL.?;
-// export const PIN_SDA = DAL.?;
-// export const PIN_SCL = DAL.?;
-// // unknown pin id ACCELEROMETER
-// // unknown pin id HEADPHONE

@@ -8,6 +8,9 @@ declare namespace pins {
     const RX: DigitalInOutPin;
     //% fixedInstance shim=pxt::getPin(PIN_TX)
     const TX: DigitalInOutPin;
+
+    //% fixedInstance shim=pxt::getPin(PIN_DXL_PWR)
+    const DXL_PWR: DigitalInOutPin;        
 }
 
 declare namespace input {
