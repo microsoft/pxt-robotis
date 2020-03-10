@@ -1,0 +1,17 @@
+{
+    "name": "dynamixel",
+    "description": "DYNAMIXEL communication",
+    "files": [
+        "dynamixel_master.cpp",
+        "dynamixel_master.h",
+        "dynamixel_port.h",
+        "dynamixel.ts",
+        "enums.d.ts",
+        "shims.d.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52",
+        "serial": "file:../serial"
+    }
+}
