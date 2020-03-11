@@ -174,6 +174,41 @@ namespace network {
             value = d.dxlDevice.read(id, 132, 4).getNumber(NumberFormat.UInt32LE, 0);
         }
         return value;
+    }
+    
+    /**
+    * DYNAMIXEL set Velocity.
+    */
+    //% blockId=dxl_set_velocity block="DYNAMIXEL|set Velocity of ID %id to %value"
+    //% id.min=0 id.max= 252
+    //% value.min=-1023 value.max=1023
+    //% weight=18
+    //% group="DYNAMIXEL"
+    export function setVelocity(id: number, value: number): void {
+        const d = device();
+        if(d){
+            let data = control.createBuffer(4);
+            if(data){
+                data.setNumber(NumberFormat.Int32LE, 0, value);
+                d.dxlDevice.write(id, 104, data);
+            }
+        }
+    }
+    
+    /**
+    * DYNAMIXEL get Present Velocity.
+    */
+    //% blockId=dxl_get_velocity block="DYNAMIXEL|get Present Velocity of ID %id"
+    //% id.min=0 id.max= 252
+    //% weight=18
+    //% group="DYNAMIXEL"
+    export function getVelocity(id: number): number {
+        let value: number = 0;
+        const d = device();
+        if(d){
+            value = d.dxlDevice.read(id, 128, 4).getNumber(NumberFormat.Int32LE, 0);
+        }
+        return value;
     }    
 
 } // namespace network
