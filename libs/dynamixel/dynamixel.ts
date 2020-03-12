@@ -1,30 +1,30 @@
-namespace network {
-    export class DYNAMIXEL {
-        dxlDevice: DYNAMIXELDevice;
-        constructor(dxlDevice: DYNAMIXELDevice) {
+namespace dynamixel {
+    export class Dynamixel {
+        dxlDevice: DynamixelDevice;
+        constructor(dxlDevice: DynamixelDevice) {
             this.dxlDevice = dxlDevice;
         }
     }
 
-    let _device: DYNAMIXEL;
-    export function device(): DYNAMIXEL {
+    let _device: Dynamixel;
+    export function device(): Dynamixel {
         if (!_device) {
             const tx = pins.pinByCfg(DAL.CFG_PIN_DXL_TX);
             const rx = pins.pinByCfg(DAL.CFG_PIN_DXL_RX);
             const dir = pins.pinByCfg(DAL.CFG_PIN_DXL_DIR);
             if (!tx || !rx || !dir) return undefined;
-            const dev = network.InternalCreateDXLDevice(tx, rx, dir, DAL.DEVICE_ID_DYNAMIXEL);
-            _device = new DYNAMIXEL(dev);
+            const dev = dynamixel.InternalCreateDXLDevice(tx, rx, dir, DAL.DEVICE_ID_DYNAMIXEL);
+            _device = new Dynamixel(dev);
         }        
         return _device;
     }
 
     /**
-    * Set port baudrate for DYNAMIXEL comm.
+    * Set port baudrate for Dynamixel comm.
     */
-    //% blockId=dxl_set_port_baud block="DYNAMIXEL|set port baudrate %rate"
+    //% blockId=dxl_set_port_baud block="Dynamixel|set port baudrate %rate"
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function setPortBaud(rate: DXLBaudRate): void {
         const d = device();
         if(d) d.dxlDevice.setPortBaudRate(rate);
@@ -33,22 +33,22 @@ namespace network {
     /**
     * DYNAMXIEL Ping
     */
-    //% blockId=dxl_ping block="DYNAMIXEL|Ping to ID %id"
+    //% blockId=dxl_ping block="Dynamixel|Ping to ID %id"
     //% id.min=0 id.max= 252
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function ping(id: number): boolean {
         const d = device();
         return d ? d.dxlDevice.ping(id):false;
     }
 
     /**
-    * DYNAMIXEL Read.
+    * Dynamixel Read.
     */
-    //% blockId=dxl_read block="DYNAMIXEL|Read from address %addr of ID %id by length %len"
+    //% blockId=dxl_read block="Dynamixel|Read from address %addr of ID %id by length %len"
     //% id.min=0 id.max= 252
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function read(addr: number, id: number, len: number): Buffer {
         const d = device();
         if (d)
@@ -58,24 +58,24 @@ namespace network {
     }
 
     /**
-    * DYNAMIXEL Write.
+    * Dynamixel Write.
     */
-    //% blockId=dxl_write block="DYNAMIXEL|Write buffer %buffer as long as from address %addr of ID %id "
+    //% blockId=dxl_write block="Dynamixel|Write buffer %buffer as long as from address %addr of ID %id "
     //% id.min=0 id.max= 252
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function write(buffer: Buffer, addr: number, id: number): void {
         const d = device();
         if(d) d.dxlDevice.write(id, addr, buffer);
     }
 
     /**
-    * DYNAMIXEL get Model Number.
+    * Dynamixel get Model Number.
     */
-    //% blockId=dxl_get_model_num block="DYNAMIXEL|get Model Number of ID %id"
+    //% blockId=dxl_get_model_num block="Dynamixel|get Model Number of ID %id"
     //% id.min=0 id.max= 252
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function getModelNumber(id: number): number {
         let num: number = 0;
         const d = device();
@@ -88,12 +88,12 @@ namespace network {
     }
 
     /**
-    * DYNAMIXEL set Operating Mode
+    * Dynamixel set Operating Mode
     */
-    //% blockId=dxl_set_operating_mode block="DYNAMIXEL|set Operating Mode of ID %id to %mode"
+    //% blockId=dxl_set_operating_mode block="Dynamixel|set Operating Mode of ID %id to %mode"
     //% id.min=0 id.max= 252
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function setOperatingMode(id: number, mode: DXLOperatingMode): void {
         const d = device();
         if(d){
@@ -106,12 +106,12 @@ namespace network {
     }
 
     /**
-    * DYNAMIXEL set Torque Enable
+    * Dynamixel set Torque Enable
     */
-    //% blockId=dxl_set_torque_enable block="DYNAMIXEL|set Torque Enable of ID %id to %state=toggleHighLow"
+    //% blockId=dxl_set_torque_enable block="Dynamixel|set Torque Enable of ID %id to %state=toggleHighLow"
     //% id.min=0 id.max= 252
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function setTorqueEnable(id: number, state: boolean): void {
         const d = device();
         if(d){
@@ -124,12 +124,12 @@ namespace network {
     }
 
     /**
-    * DYNAMIXEL set LED.
+    * Dynamixel set LED.
     */
-    //% blockId=dxl_set_led block="DYNAMIXEL|set LED of ID %id to %state=toggleHighLow"
+    //% blockId=dxl_set_led block="Dynamixel|set LED of ID %id to %state=toggleHighLow"
     //% id.min=0 id.max= 252
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function setLED(id: number, state: boolean): void {
         const d = device();
         if(d){
@@ -142,13 +142,13 @@ namespace network {
     }
 
     /**
-    * DYNAMIXEL set Position.
+    * Dynamixel set Position.
     */
-    //% blockId=dxl_set_position block="DYNAMIXEL|set Position of ID %id to %value"
+    //% blockId=dxl_set_position block="Dynamixel|set Position of ID %id to %value"
     //% id.min=0 id.max= 252
     //% value.min=0 value.max= 4096
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function setPosition(id: number, value: number): void {
         const d = device();
         if(d){
@@ -161,12 +161,12 @@ namespace network {
     }
     
     /**
-    * DYNAMIXEL get Present Position.
+    * Dynamixel get Present Position.
     */
-    //% blockId=dxl_get_position block="DYNAMIXEL|get Present Position of ID %id"
+    //% blockId=dxl_get_position block="Dynamixel|get Present Position of ID %id"
     //% id.min=0 id.max= 252
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function getPosition(id: number): number {
         let value: number = 0;
         const d = device();
@@ -177,13 +177,13 @@ namespace network {
     }
     
     /**
-    * DYNAMIXEL set Velocity.
+    * Dynamixel set Velocity.
     */
-    //% blockId=dxl_set_velocity block="DYNAMIXEL|set Velocity of ID %id to %value"
+    //% blockId=dxl_set_velocity block="Dynamixel|set Velocity of ID %id to %value"
     //% id.min=0 id.max= 252
     //% value.min=-1023 value.max=1023
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function setVelocity(id: number, value: number): void {
         const d = device();
         if(d){
@@ -196,12 +196,12 @@ namespace network {
     }
     
     /**
-    * DYNAMIXEL get Present Velocity.
+    * Dynamixel get Present Velocity.
     */
-    //% blockId=dxl_get_velocity block="DYNAMIXEL|get Present Velocity of ID %id"
+    //% blockId=dxl_get_velocity block="Dynamixel|get Present Velocity of ID %id"
     //% id.min=0 id.max= 252
     //% weight=18
-    //% group="DYNAMIXEL"
+    //% group="Dynamixel"
     export function getVelocity(id: number): number {
         let value: number = 0;
         const d = device();
@@ -211,4 +211,4 @@ namespace network {
         return value;
     }    
 
-} // namespace network
+} // namespace dynamixel

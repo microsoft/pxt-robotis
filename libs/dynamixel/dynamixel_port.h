@@ -19,7 +19,7 @@
 #include "Serial.h"
 #include "dynamixel.h"
 
-namespace DYNAMIXEL {
+namespace dynamixel {
 
 /* SerialPortHandler */
 class SerialPortHandler : public DXLPortHandler
@@ -98,4 +98,4 @@ class SerialPortHandler : public DXLPortHandler
 };
 
 
-} //namespace DYNAMIXEL
+} //namespace dynamixel

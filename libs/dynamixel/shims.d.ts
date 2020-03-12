@@ -17,37 +17,37 @@
      * limitations under the License.
      *******************************************************************************/
 
-declare namespace DYNAMIXEL {
+declare namespace dynamixel {
 }
-declare namespace network {
+declare namespace dynamixel {
 
     /**
      * Opens a DYNAMIXEL communication driver
      */
-    //% shim=network::InternalCreateDXLDevice
-    function InternalCreateDXLDevice(tx: DigitalInOutPin, rx: DigitalInOutPin, dir: DigitalInOutPin, id: int32): DYNAMIXELDevice;
+    //% shim=dynamixel::InternalCreateDXLDevice
+    function InternalCreateDXLDevice(tx: DigitalInOutPin, rx: DigitalInOutPin, dir: DigitalInOutPin, id: int32): DynamixelDevice;
 }
 
 
-declare interface DYNAMIXELDevice {
+declare interface DynamixelDevice {
     /**
      */
-    //% shim=DYNAMIXELDeviceMethods::setPortBaudRate
+    //% shim=DynamixelDeviceMethods::setPortBaudRate
     setPortBaudRate(rate: DXLBaudRate): void;
 
     /**
      */
-    //% shim=DYNAMIXELDeviceMethods::ping
+    //% shim=DynamixelDeviceMethods::ping
     ping(id: uint8): boolean;
 
     /**
      */
-    //% shim=DYNAMIXELDeviceMethods::read
+    //% shim=DynamixelDeviceMethods::read
     read(id: uint8, addr: uint16, len: uint16): Buffer;
 
     /**
      */
-    //% shim=DYNAMIXELDeviceMethods::write
+    //% shim=DynamixelDeviceMethods::write
     write(id: uint8, addr: uint16, buffer: Buffer): void;
 }
 

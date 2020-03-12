@@ -29,10 +29,9 @@ enum class DXLOperatingMode {
   OPModePWM = 16
 };
 
+namespace dynamixel {
 
-namespace network {
-
-class DYNAMIXELMaster:public DYNAMIXEL::Master {
+class DynamixelMaster:public DYNAMIXEL::Master {
   private:
     DevicePin *tx;
     DevicePin *rx;
@@ -40,9 +39,9 @@ class DYNAMIXELMaster:public DYNAMIXEL::Master {
     CODAL_SERIAL ser;
 
   public:
-    DYNAMIXEL::SerialPortHandler port;
+    dynamixel::SerialPortHandler port;
 
-    DYNAMIXELMaster(DevicePin *_tx, DevicePin *_rx, DevicePin *_dir, int id)
+    DynamixelMaster(DevicePin *_tx, DevicePin *_rx, DevicePin *_dir, int id)
         : Master(), tx(_tx), rx(_rx), dir(_dir), ser(*tx, *rx), port(ser, *dir){
         if (id <= 0)
             id = allocateNotifyEvent();
@@ -53,6 +52,6 @@ class DYNAMIXELMaster:public DYNAMIXEL::Master {
     void setPortBaudRate(DXLBaudRate rate) { port.begin((unsigned long)rate); }
 };
 
-} // namespace network
+} // namespace dynamixel
 
-typedef network::DYNAMIXELMaster* DYNAMIXELDevice;
+typedef dynamixel::DynamixelMaster* DynamixelDevice;
