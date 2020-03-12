@@ -39,7 +39,7 @@ class DynamixelMaster:public DYNAMIXEL::Master {
     CODAL_SERIAL ser;
 
   public:
-    dynamixel::SerialPortHandler port;
+    SerialPortHandler port;
 
     DynamixelMaster(DevicePin *_tx, DevicePin *_rx, DevicePin *_dir, int id)
         : Master(), tx(_tx), rx(_rx), dir(_dir), ser(*tx, *rx), port(ser, *dir){
@@ -52,6 +52,6 @@ class DynamixelMaster:public DYNAMIXEL::Master {
     void setPortBaudRate(DXLBaudRate rate) { port.begin((unsigned long)rate); }
 };
 
-} // namespace dynamixel
+typedef DynamixelMaster* DynamixelDevice;
 
-typedef dynamixel::DynamixelMaster* DynamixelDevice;
+} // namespace dynamixel

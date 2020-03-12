@@ -23,7 +23,5 @@
     //% block=PWM
     OPModePWM = 16,
     }
-declare namespace dynamixel {
-}
 
 // Auto-generated. Do not edit. Really.

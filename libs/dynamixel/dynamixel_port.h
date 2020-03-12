@@ -19,8 +19,6 @@
 #include "Serial.h"
 #include "dynamixel.h"
 
-namespace dynamixel {
-
 /* SerialPortHandler */
 class SerialPortHandler : public DXLPortHandler
 {
@@ -96,6 +94,3 @@ class SerialPortHandler : public DXLPortHandler
     CODAL_PIN &dir_pin_;
     unsigned long baud_;
 };
-
-
-} //namespace dynamixel
