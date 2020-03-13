@@ -9,7 +9,7 @@ namespace dynamixel {
      * Opens a DYNAMIXEL communication driver
      */
     //%
-    DynamixelDevice InternalCreateDXLDevice(DigitalInOutPin tx, DigitalInOutPin rx, DigitalInOutPin dir, int id)
+    DynamixelDevice internalCreateDXLDevice(DigitalInOutPin tx, DigitalInOutPin rx, DigitalInOutPin dir, int id)
     {
         if(dxlDevice == NULL){
             dxlDevice = new DynamixelMaster(tx, rx, dir, id);

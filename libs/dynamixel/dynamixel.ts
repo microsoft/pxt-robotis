@@ -1,3 +1,8 @@
+/**
+ * Communication between ROBOTIS's DYNAMIXEL devices
+ */
+//% color=#000000 weight=89 icon="\uf085"
+//% groups='["DYNAMIXEL"]'
 namespace dynamixel {
     export class Dynamixel {
         dxlDevice: DynamixelDevice;
@@ -13,7 +18,7 @@ namespace dynamixel {
             const rx = pins.pinByCfg(DAL.CFG_PIN_DXL_RX);
             const dir = pins.pinByCfg(DAL.CFG_PIN_DXL_DIR);
             if (!tx || !rx || !dir) return undefined;
-            const dev = dynamixel.InternalCreateDXLDevice(tx, rx, dir, DAL.DEVICE_ID_DYNAMIXEL);
+            const dev = dynamixel.internalCreateDXLDevice(tx, rx, dir, DAL.DEVICE_ID_DYNAMIXEL);
             _device = new Dynamixel(dev);
         }        
         return _device;

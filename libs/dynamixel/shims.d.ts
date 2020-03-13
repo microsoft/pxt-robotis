@@ -4,8 +4,8 @@ declare namespace dynamixel {
     /**
      * Opens a DYNAMIXEL communication driver
      */
-    //% shim=dynamixel::InternalCreateDXLDevice
-    function InternalCreateDXLDevice(tx: DigitalInOutPin, rx: DigitalInOutPin, dir: DigitalInOutPin, id: int32): DynamixelDevice;
+    //% shim=dynamixel::internalCreateDXLDevice
+    function internalCreateDXLDevice(tx: DigitalInOutPin, rx: DigitalInOutPin, dir: DigitalInOutPin, id: int32): DynamixelDevice;
 }
 
 
