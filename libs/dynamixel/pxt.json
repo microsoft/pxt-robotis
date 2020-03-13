@@ -2,9 +2,11 @@
     "name": "dynamixel",
     "description": "DYNAMIXEL communication",
     "files": [
+        "dynamixel_protocol.c",
+        "dynamixel_protocol.h",
+        "dynamixel_port.h",
         "dynamixel_master.cpp",
         "dynamixel_master.h",
-        "dynamixel_port.h",
         "dynamixel.ts",
         "enums.d.ts",
         "shims.d.ts"
