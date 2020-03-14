@@ -34,6 +34,7 @@
         "libs/settings---files",
         "libs/radio",
         "libs/radio-broadcast",
+        "libs/dynamixel",
         "libs/robotis-cm-300"
     ],
     "serial": {
