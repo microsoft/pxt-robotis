@@ -23,7 +23,7 @@ namespace dynamixel {
 
             // enable DXL & set baudrate
             const pwr = pins.pinByCfg(DAL.CFG_PIN_DXL_PWR);
-            if (!pwr.digitalRead()) {
+            if (pwr && !pwr.digitalRead()) {
                 pwr.digitalWrite(true);
             }
 
