@@ -211,6 +211,7 @@ class DynamixelMaster:public dynamixel::Master {
     }
     
     void setPortBaudRate(DXLBaudRate rate) { port.begin((unsigned long)rate); }
+    uint16_t getPortBaudrate() { return port.getBaud(); }
 };
 
 typedef DynamixelMaster* DynamixelDevice;
