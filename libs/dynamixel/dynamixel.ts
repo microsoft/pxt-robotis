@@ -1,8 +1,8 @@
 /**
  * Communication between ROBOTIS's DYNAMIXEL devices
  */
+//% block="DYNAMIXEL"
 //% color=#000000 weight=89 icon="\uf085"
-//% groups='["DYNAMIXEL"]'
 namespace dynamixel {
     export class Dynamixel {
         dxlDevice: DynamixelDevice;
@@ -37,7 +37,7 @@ namespace dynamixel {
     /**
     * Set port baudrate for Dynamixel comm.
     */
-    //% blockId=dxl_set_port_baud block="set port baudrate %rate"
+    //% blockId=dxl_set_port_baud block="DXL set port baudrate %rate"
     //% weight=18
     //% advanced=true
     export function setPortBaud(rate: DXLBaudRate): void {
@@ -48,7 +48,7 @@ namespace dynamixel {
     /**
     * DYNAMXIEL Ping
     */
-    //% blockId=dxl_ping block="Ping to ID %id"
+    //% blockId=dxl_ping block="DXL Ping to ID %id"
     //% id.min=0 id.max=252 id.defl=1
     //% weight=18
     //% advanced=true
@@ -58,9 +58,9 @@ namespace dynamixel {
     }
 
     /**
-    * Dynamixel Read.
+    * DYNAMXIEL Read.
     */
-    //% blockId=dxl_read block="Read from address %addr of Dxl ID %id by length %len"
+    //% blockId=dxl_read block="DXL Read from address %addr of ID %id by length %len"
     //% id.min=0 id.max=252 id.defl=1
     //% weight=18
     //% advanced=true
@@ -73,9 +73,9 @@ namespace dynamixel {
     }
 
     /**
-    * Dynamixel Write.
+    * DYNAMXIEL Write.
     */
-    //% blockId=dxl_write block="Write buffer %buffer as long as from address %addr of Dxl ID %id "
+    //% blockId=dxl_write block="DXL Write buffer %buffer as long as from address %addr of ID %id "
     //% id.min=0 id.max=252 id.defl=1
     //% weight=18
     //% advanced=true
@@ -85,9 +85,9 @@ namespace dynamixel {
     }
 
     /**
-    * Dynamixel get Model Number.
+    * DYNAMXIEL get Model Number.
     */
-    //% blockId=dxl_get_model_num block="get Model Number of Dxl ID %id"
+    //% blockId=dxl_get_model_num block="DXL get Model Number of ID %id"
     //% id.min=0 id.max=252 id.defl=1
     //% weight=18
     //% advanced=true
@@ -103,9 +103,9 @@ namespace dynamixel {
     }
 
     /**
-    * Dynamixel set Operating Mode
+    * DYNAMXIEL set Operating Mode
     */
-    //% blockId=dxl_set_operating_mode block="set Operating Mode of Dxl ID %id to %mode"
+    //% blockId=dxl_set_operating_mode block="DXL set Operating Mode of ID %id to %mode"
     //% id.min=0 id.max=252 id.defl=1
     //% weight=18
     //% advanced=true
@@ -121,9 +121,9 @@ namespace dynamixel {
     }
 
     /**
-    * Dynamixel set Torque Enable
+    * DYNAMXIEL set Torque Enable
     */
-    //% blockId=dxl_set_torque_enable block="set Torque Enable of Dxl ID %id to %state=toggleOnOff"
+    //% blockId=dxl_set_torque_enable block="DXL set Torque Enable of ID %id to %state=toggleOnOff"
     //% id.min=0 id.max=252 id.defl=1
     //% weight=18
     //% advanced=true
@@ -139,9 +139,9 @@ namespace dynamixel {
     }
 
     /**
-    * Dynamixel set LED.
+    * DYNAMXIEL set LED.
     */
-    //% blockId=dxl_set_led block="set LED of Dxl ID %id to %state=toggleOnOff"
+    //% blockId=dxl_set_led block="DXL set LED of ID %id to %state=toggleOnOff"
     //% id.min=0 id.max=252 id.defl=1
     //% weight=18
     export function setLED(id: number, state: boolean): void {
@@ -156,9 +156,9 @@ namespace dynamixel {
     }
 
     /**
-    * Dynamixel set Position.
+    * DYNAMXIEL set Position.
     */
-    //% blockId=dxl_set_position block="set Position of Dxl ID %id to %value"
+    //% blockId=dxl_set_position block="DXL set Position of ID %id to %value"
     //% id.min=0 id.max=252 id.defl=1
     //% value.min=0 value.max=4095
     //% weight=18
@@ -177,9 +177,9 @@ namespace dynamixel {
     }
     
     /**
-    * Dynamixel get Present Position.
+    * DYNAMXIEL get Present Position.
     */
-    //% blockId=dxl_get_position block="get Present Position of Dxl ID %id"
+    //% blockId=dxl_get_position block="DXL get Present Position of ID %id"
     //% id.min=0 id.max=252 id.defl=1
     //% weight=18
     //% advanced=true
@@ -193,9 +193,9 @@ namespace dynamixel {
     }
     
     /**
-    * Dynamixel set Velocity.
+    * DYNAMXIEL set Velocity.
     */
-    //% blockId=dxl_set_velocity block="set Velocity of Dxl ID %id to %value"
+    //% blockId=dxl_set_velocity block="DXL set Velocity of ID %id to %value"
     //% id.min=0 id.max=252 id.defl=1
     //% value.min=-1023 value.max=1023
     //% weight=18
@@ -212,9 +212,9 @@ namespace dynamixel {
     }
     
     /**
-    * Dynamixel get Present Velocity.
+    * DYNAMXIEL get Present Velocity.
     */
-    //% blockId=dxl_get_velocity block="get Present Velocity of Dxl ID %id"
+    //% blockId=dxl_get_velocity block="DXL get Present Velocity of ID %id"
     //% id.min=0 id.max=252 id.defl=1
     //% weight=18
     //% advanced=true
