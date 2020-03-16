@@ -36,6 +36,14 @@ void setPortBaudRate(DynamixelDevice device, DXLBaudRate rate)
 /**
  */
 //%
+uint16_t getPortBaudRate(DynamixelDevice device) 
+{
+    return device->getPortBaudrate();
+}
+
+/**
+ */
+//%
 bool ping(DynamixelDevice device, uint8_t id) 
 {
     uint8_t recv_id;

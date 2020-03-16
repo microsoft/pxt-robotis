@@ -17,6 +17,11 @@ declare interface DynamixelDevice {
 
     /**
      */
+    //% shim=DynamixelDeviceMethods::getPortBaudRate
+    getPortBaudRate(): uint16;
+
+    /**
+     */
     //% shim=DynamixelDeviceMethods::ping
     ping(id: uint8): boolean;
 
