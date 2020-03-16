@@ -19,4 +19,21 @@ namespace config {
     export const PIN_DXL_TX = DAL.P0_7;
     export const PIN_DXL_DIR = DAL.P1_14;
     export const PIN_DXL_PWR = DAL.P1_8;
+    
+    //LCD (temporarily test lcd with wiring)
+    export const PIN_DISPLAY_SCK = DAL.P0_1;
+    export const PIN_DISPLAY_MISO = DAL.P0_24;
+    export const PIN_DISPLAY_MOSI = DAL.P1_2;
+    export const PIN_DISPLAY_CS = DAL.P0_5;
+    export const PIN_DISPLAY_DC = DAL.P1_5;
+    export const PIN_DISPLAY_RST = DAL.P1_3;
+    export const PIN_DISPLAY_BL = DAL.P1_7;
+    
+    //ILI9341
+    export const DISPLAY_TYPE = 9341
+    export const DISPLAY_WIDTH = 160
+    export const DISPLAY_HEIGHT = 120
+    export const DISPLAY_CFG0 = 0x08
+    export const DISPLAY_CFG1 = 0x0010ff
+    export const DISPLAY_CFG2 = 32
 }
