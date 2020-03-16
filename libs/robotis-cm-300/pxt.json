@@ -14,7 +14,8 @@
         "core---nrf52": "file:../core---nrf52",
         "buttons": "file:../buttons",
         "serial": "file:../serial",
-        "dynamixel": "file:../dynamixel"
+        "dynamixel": "file:../dynamixel",
+        "accelerometer": "file:../accelerometer"
     },
     "public": true,
     "dalDTS": {
