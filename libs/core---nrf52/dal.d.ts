@@ -856,6 +856,7 @@ declare const enum DAL {
     ACCELEROMETER_TYPE_MMA8653 = 58,
     ACCELEROMETER_TYPE_MSA300 = 76,
     ACCELEROMETER_TYPE_MPU6050 = 104,
+    ACCELEROMETER_TYPE_ICM20600 = 104,
     DISPLAY_TYPE_ST7735 = 7735,
     DISPLAY_TYPE_ILI9341 = 9341,
     CFG_PIN_A0 = 100,
@@ -1088,8 +1089,6 @@ declare const enum DAL {
     OPModePosition = 3,
     OPModeExPosition = 4,
     OPModePWM = 16,
-    COMMON_MODEL_NUMBER_ADDR = 0,
-    COMMON_MODEL_NUMBER_ADDR_LENGTH = 2,
     // /pxtapp/dynamixel/dynamixel_port.h
     DEFAULT_DXL_BUF_LENGTH = 256,
     // /pxtapp/dynamixel/dynamixel_protocol.h

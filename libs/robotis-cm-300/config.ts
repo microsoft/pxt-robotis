@@ -7,6 +7,9 @@ namespace config {
     //Sensors
     export const PIN_LIGHT = DAL.P0_29;
     export const PIN_BATTSENSE = DAL.P0_31;
+    export const PIN_ACCELEROMETER_SCL = DAL.P1_9;
+    export const PIN_ACCELEROMETER_SDA = DAL.P0_11;
+    export const PIN_ACCELEROMETER_INT = DAL.P0_5;
 
     //Actuators
 
@@ -19,4 +22,8 @@ namespace config {
     export const PIN_DXL_TX = DAL.P0_7;
     export const PIN_DXL_DIR = DAL.P1_14;
     export const PIN_DXL_PWR = DAL.P1_8;
+
+    export const PIN_SCL = DAL.P1_9;
+    export const PIN_SDA = DAL.P0_11;
+    
 }
