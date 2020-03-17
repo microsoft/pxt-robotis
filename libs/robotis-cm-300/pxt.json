@@ -15,7 +15,8 @@
         "buttons": "file:../buttons",
         "serial": "file:../serial",
         "dynamixel": "file:../dynamixel",
-        "accelerometer": "file:../accelerometer"
+        "accelerometer": "file:../accelerometer",
+        "game": "file:../game"
     },
     "public": true,
     "dalDTS": {
