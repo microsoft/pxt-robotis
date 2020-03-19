@@ -37,8 +37,8 @@ namespace config {
     
     //ILI9341
     export const DISPLAY_TYPE = 9341
-    export const DISPLAY_WIDTH = 160
-    export const DISPLAY_HEIGHT = 120
+    export const DISPLAY_WIDTH = 320
+    export const DISPLAY_HEIGHT = 240
     export const DISPLAY_CFG0 = 0x08
     export const DISPLAY_CFG1 = 0x0010ff
     export const DISPLAY_CFG2 = 32    
