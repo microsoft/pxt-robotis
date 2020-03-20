@@ -131,7 +131,7 @@ namespace pxsim {
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
             this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);;
-            this.builtinParts["screen"] = this.screenState = new ScreenState([], getConfig(DAL.CFG_DISPLAY_WIDTH) || 160, getConfig(DAL.CFG_DISPLAY_HEIGHT) || 128);
+            this.builtinParts["screen"] = this.screenState = new ScreenState([]);
 
             this.builtinVisuals["buttons"] = () => new visuals.ButtonView();
             this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
