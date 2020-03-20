@@ -21,12 +21,25 @@ namespace _screen_internal {
     //% shim=pxt::updateStats
     function updateStats(msg: string): void { }
 
+    //% shim=pxt::updateScreenStatusBar
+    function updateScreenStatusBar(img: Image): void { return }
+    //% shim=pxt::setupScreenStatusBar
+    function setupScreenStatusBar(barHeight: number): void { return }
+
     //% parts="screen"
     export function createScreen() {
         const img = image.create(160, 120)
         
+        setupScreenStatusBar(8)
+
+        const status = image.create(160, 8)
+        updateScreenStatusBar(status) // clear the status area
+
         control.__screen.setupUpdate(() => updateScreen(img))
         control.EventContext.onStats = function (msg: string) {
+            status.fill(0)
+            status.print(msg, 2, 2, 1, image.font5)
+            updateScreenStatusBar(status)
             updateStats(msg);
         }
 
