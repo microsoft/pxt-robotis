@@ -91,10 +91,7 @@
         "onStartWeight": 100,
         "pauseUntilBlock": {},
         "breakBlock": true,
-        "continueBlock": true,
-        "bannedCategories": [
-            "images"
-        ]
+        "continueBlock": true
     },
     "compile": {
         "isNative": true,

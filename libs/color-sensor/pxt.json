@@ -1,4 +1,3 @@
 {
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/color-sensor",
-    "hidden": true
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/color-sensor"
 }
