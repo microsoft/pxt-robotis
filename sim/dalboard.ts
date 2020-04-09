@@ -29,7 +29,8 @@ namespace pxsim {
         ScreenBoard,
         InfraredBoard,
         LCDBoard,
-        RadioBoard {
+        RadioBoard,
+        DynamixelBoard {
         // state & update logic for component services
         viewHost: visuals.BoardHost;
         view: SVGElement;
@@ -50,6 +51,7 @@ namespace pxsim {
         irState: InfraredState;
         lcdState: LCDState;
         radioState: RadioState;
+        dynamixelState: DynamixelState;
 
         constructor(public boardDefinition: BoardDefinition) {
             super();
@@ -111,6 +113,7 @@ namespace pxsim {
             this.thermometerUnitState = TemperatureUnit.Celsius;
             this.irState = new InfraredState();
             this.lcdState = new LCDState();
+            this.dynamixelState = new DynamixelState();
             this.bus.setNotify(DAL.DEVICE_ID_NOTIFY, DAL.DEVICE_ID_NOTIFY_ONE);
 
             // TODO we need this.buttonState set for pxtcore.getButtonByPin(), but
