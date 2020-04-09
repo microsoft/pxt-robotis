@@ -96,7 +96,7 @@
     "compile": {
         "isNative": true,
         "useUF2": true,
-        "webUSB": true,
+        "webUSB": false,
         "hasHex": true,
         "saveAsPNG": true,
         "deployDrives": ".*",
