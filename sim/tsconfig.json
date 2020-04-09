@@ -8,5 +8,10 @@
         "rootDir": ".",
         "newLine": "LF",
         "sourceMap": false
-    }
+    },
+    "include": [
+        "*.ts",
+        "visuals/*.ts",
+        "../libs/dynamixel/sim/*.ts"
+    ]
 }

@@ -29,7 +29,8 @@ namespace pxsim {
         ScreenBoard,
         InfraredBoard,
         LCDBoard,
-        RadioBoard {
+        RadioBoard,
+        DynamixelBoard {
         // state & update logic for component services
         viewHost: visuals.BoardHost;
         view: SVGElement;
@@ -50,6 +51,7 @@ namespace pxsim {
         irState: InfraredState;
         lcdState: LCDState;
         radioState: RadioState;
+        dynamixelState: DynamixelState;
 
         constructor(public boardDefinition: BoardDefinition) {
             super();
@@ -111,6 +113,7 @@ namespace pxsim {
             this.thermometerUnitState = TemperatureUnit.Celsius;
             this.irState = new InfraredState();
             this.lcdState = new LCDState();
+            this.dynamixelState = new DynamixelState();
             this.bus.setNotify(DAL.DEVICE_ID_NOTIFY, DAL.DEVICE_ID_NOTIFY_ONE);
 
             // TODO we need this.buttonState set for pxtcore.getButtonByPin(), but
@@ -137,11 +140,11 @@ namespace pxsim {
             this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
 
             this.builtinParts["neopixel"] = (pin: Pin) => { return this.neopixelState(pin.id); };
-            this.builtinVisuals["neopixel"] = () => new visuals.NeoPixelView();
+            this.builtinVisuals["neopixel"] = () => new visuals.NeoPixelView(parsePinString);
             this.builtinPartVisuals["neopixel"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
 
             this.builtinParts["dotstar"] = (pin: Pin) => { return this.neopixelState(pin.id); };
-            this.builtinVisuals["dotstar"] = () => new visuals.NeoPixelView();
+            this.builtinVisuals["dotstar"] = () => new visuals.NeoPixelView(parsePinString);
             this.builtinPartVisuals["dotstar"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
 
             this.builtinParts["lcd"] =  this.lcdState;
@@ -149,7 +152,7 @@ namespace pxsim {
             this.builtinPartVisuals["lcd"] = (xy: visuals.Coord) => visuals.mkLCDPart(xy);
             
             this.builtinParts["pixels"] = (pin: Pin) => { return this.neopixelState(undefined); };
-            this.builtinVisuals["pixels"] = () => new visuals.NeoPixelView();
+            this.builtinVisuals["pixels"] = () => new visuals.NeoPixelView(parsePinString);
             this.builtinPartVisuals["pixels"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
 
             this.builtinPartVisuals["buttons"] = (xy: visuals.Coord) => visuals.mkBtnSvg(xy);
