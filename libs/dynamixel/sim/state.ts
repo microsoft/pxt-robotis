@@ -4,19 +4,19 @@ namespace pxsim {
     }
 
     export class DynamixelState {
-        createDXLDevice(tx: DigitalInOutPin,
-            rx: DigitalInOutPin, dir: DigitalInOutPin,
-            d: number): DynamixelDevice {
+        createDXLDevice(tx: pins.DigitalInOutPin,
+            rx: pins.DigitalInOutPin, dir: pins.DigitalInOutPin,
+            id: number): DynamixelDevice {
             // TODO mimic C++
-            return new DynamixelDevice(tx, rx, dir, d);
+            return new DynamixelDevice(tx, rx, dir, id);
         }
     }
 
     export class DynamixelDevice {
         portBaudRate = 115200;
 
-        constructor(public tx: DigitalInOutPin,
-            public rx: DigitalInOutPin, public dir: DigitalInOutPin,
+        constructor(public tx: pins.DigitalInOutPin,
+            public rx: pins.DigitalInOutPin, public dir: pins.DigitalInOutPin,
             public d: number) {
 
         }
@@ -42,14 +42,14 @@ namespace pxsim {
 
         /**
          */
-        read(id: uint8, addr: uint16, len: uint16): Buffer {
+        read(id: number, addr: number, len: number): Buffer {
             // TODO
-            return
+            return undefined;
         }
 
         /**
          */
-        write(id: uint8, addr: uint16, buffer: Buffer): void {
+        write(id: number, addr: number, buffer: Buffer): void {
             // TODO
         }
     }
