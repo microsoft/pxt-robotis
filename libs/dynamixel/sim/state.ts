@@ -42,14 +42,14 @@ namespace pxsim {
 
         /**
          */
-        read(id: number, addr: number, len: number): Buffer {
+        read(id: number, addr: number, len: number): RefBuffer {
             // TODO
-            return undefined;
+            return pxsim.BufferMethods.createBuffer(0);
         }
 
         /**
          */
-        write(id: number, addr: number, buffer: Buffer): void {
+        write(id: number, addr: number, buffer: RefBuffer): void {
             // TODO
         }
     }

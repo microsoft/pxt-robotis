@@ -22,11 +22,11 @@ namespace pxsim.DynamixelDeviceMethods {
         return device.ping(id);
     }
 
-    export function read(device: DynamixelDevice, id: number, addr: number, len: number): Buffer {
+    export function read(device: DynamixelDevice, id: number, addr: number, len: number): RefBuffer {
         return device.read(id, addr, len);
     }
 
-    export function write(device: DynamixelDevice, id: number, addr: number, buffer: Buffer): void {
+    export function write(device: DynamixelDevice, id: number, addr: number, buffer: RefBuffer): void {
         device.write(id, addr, buffer);
     }
 }
