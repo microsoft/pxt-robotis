@@ -80,7 +80,7 @@ namespace pxsim.visuals {
  </svg:g>
  <svg:rect
     style="fill:#dddddd;stroke-width:1.42693794"
-    id="LED_A"
+    id="LED"
     width="51.597458"
     height="15.101695"
     x="334.47131"

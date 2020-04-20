@@ -7,12 +7,14 @@ namespace pxsim {
 
     export function pinByName(name: string) {
         let v = pinIds[name]
+        console.log("### pinByName : " + v + " / " + name);
         if (v == null) {
             v = getConfig(getConfigKey("PIN_" + name))
+            console.log("### pinByName v null : " + v + " / " + name);
         }
         let p = pxtcore.getPin(v)
         if (!p)
-            console.error("missing pin: " + name + "(" + v + ")")
+            console.error("### missing pin: " + name + "(" + v + ")")
         return p
     }
 
@@ -51,6 +53,7 @@ namespace pxsim {
         irState: InfraredState;
         lcdState: LCDState;
         radioState: RadioState;
+        lightRGBState: LightRGBState;
         dynamixelState: DynamixelState;
 
         constructor(public boardDefinition: BoardDefinition) {
@@ -175,11 +178,14 @@ namespace pxsim {
             this.builtinVisuals["screen"] = () => new visuals.ScreenView();
             this.builtinPartVisuals["screen"] = (xy: visuals.Coord) => visuals.mkScreenPart(xy);
 
+            this.builtinParts["lightRGB"] = this.lightRGBState = new LightRGBState();
+
             
             const neopixelPinCfg = getConfig(DAL.CFG_PIN_NEOPIXEL) ||
                 getConfig(DAL.CFG_PIN_DOTSTAR_DATA);
-            if (neopixelPinCfg !== null)
+            if (neopixelPinCfg !== null) {
                 this.neopixelPin = this.edgeConnectorState.getPin(neopixelPinCfg);
+            }
         }
 
         receiveMessage(msg: SimulatorMessage) {

@@ -12,6 +12,7 @@
     "include": [
         "*.ts",
         "visuals/*.ts",
+        "state/*.ts",
         "../libs/dynamixel/sim/*.ts"
     ]
 }

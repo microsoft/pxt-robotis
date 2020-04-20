@@ -578,7 +578,7 @@ namespace pxsim.visuals {
         wireframe?: boolean;
     }
 
-    export class BrainPadBoardSvg implements BoardView {
+    export class CM300BoardSvg implements BoardView {
         public element: SVGSVGElement;
         private style: SVGStyleElement;
         private defs: SVGDefsElement;
@@ -588,9 +588,9 @@ namespace pxsim.visuals {
         private buttonsOuter: SVGElement[];
         private pins: SVGElement[];
         private pinControls: { [index: number]: AnalogPinControl };
-        private rgbLed: SVGCircleElement;
         private systemLed: SVGElement;
-        private redLED: SVGRectElement;
+        private ledRGB: SVGRectElement;
+        private onBoardLeds: BoardLed[];
         private lcd: SVGImageElement;
         private lightLevelButton: SVGCircleElement;
         private lightLevelGradient: SVGLinearGradientElement;
@@ -610,6 +610,8 @@ namespace pxsim.visuals {
         };
 
         constructor(public props: IBoardProps) {
+            this.onBoardLeds = []
+
             this.fixPinIds();
             this.buildDom();
             if (props && props.wireframe)
@@ -624,7 +626,7 @@ namespace pxsim.visuals {
                 this.updateState();
                 this.attachEvents();
                 this.initScreen();
-            }
+            }            
         }
 
         private fixPinIds() {
@@ -728,8 +730,9 @@ namespace pxsim.visuals {
                 svg.fill(this.buttons[i], buttons[i].pressed ? theme.buttonDown : theme.buttonUps[i]);
             }
 
-            // this.updateRgbLed();
-            this.updateLedA();
+            // this.updateLedRGB();
+            this.onBoardLeds.forEach(l => l.updateState());
+
             this.updateGestures();
 
             this.updateSound();
@@ -751,55 +754,33 @@ namespace pxsim.visuals {
             }
         }
 
-        // private updateRgbLed() {
-        //     let state = this.board;
-        //     if (!state) return;
-           
-        //     const rgb = state.lightBulbState.getColor();
-
-        //     if (this.rgbLed) {
-        //         if (!rgb || (rgb.length >= 3 && rgb[0] === 0 && rgb[1] === 0 && rgb[2] === 0)) {
-        //             // Clear the pixel
-        //             svg.fill(this.rgbLed, `#feffe9`);
-        //             svg.filter(this.rgbLed, null);
-        //             this.rgbLed.style.strokeWidth = "0.28349999";
-        //             this.rgbLed.style.stroke = "#58595b";
-        //         } else {
-        //             let hsl = visuals.rgbToHsl(rgb);
-        //             let [h, s, l] = hsl;
-        //             let lx = Math.max(l * 1.3, 85);
-        //             // at least 10% luminosity
-        //             l = l * 90 / 100 + 10;
-        //             this.rgbLed.style.stroke = `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`
-        //             this.rgbLed.style.strokeWidth = "1.5";
-        //             svg.fill(this.rgbLed, `hsl(${h}, ${s}%, ${lx}%)`)
-        //             svg.filter(this.rgbLed, `url(#neopixelglow)`);
-                    
-        //             // let transform = l / 100 * 0.5;
-        //             // this.rgbLed.style.transform = `scale(${0.9 + transform})`;
-        //             // this.rgbLed.style.transformOrigin = "211.30725px 43.049255px";
-        //         }
-        //     }
-        // }
-
-        private updateLedA() {
+        private updateLedRGB() {
             let state = this.board;
             if (!state) return;
            
-            const rgb = [0,0,0];
+            // const rgb = [0,0,0];
+            const rgb = state.lightRGBState.getColor();            
 
-            if (this.redLED) {
-                if (!rgb || (rgb.length >= 3 && rgb[0] === 0 && rgb[1] === 0 && rgb[2] === 0)) {
+            if (this.ledRGB) {
+                if (!rgb || 
+                    (rgb.length >= 3 && rgb[0] === 0 && rgb[1] === 0 && rgb[2] === 0) ||
+                    (rgb.length >= 3 && rgb[0] === undefined && rgb[1] === undefined && rgb[2] === undefined)
+                    ) {
                     // Clear the pixel
-                    svg.fill(this.redLED, `#000000`);
-                    svg.filter(this.redLED, null);
-                    this.redLED.style.strokeWidth = "0.28349999";
-                    this.redLED.style.stroke = "#58595b";
+                    svg.fill(this.ledRGB, `#000000`);
+                    svg.filter(this.ledRGB, null);
+                    this.ledRGB.style.strokeWidth = "0.28349999";
+                    this.ledRGB.style.stroke = "#58595b";
                 } else {
-                    svg.fill(this.redLED, `#ff0000`);
-                    svg.filter(this.redLED, null);
-                    this.redLED.style.strokeWidth = "0.28349999";
-                    this.redLED.style.stroke = "#58595b";
+                    let hsl = visuals.rgbToHsl(rgb);
+                    let [h, s, l] = hsl;
+                    let lx = Math.max(l * 1.3, 85);
+                    // at least 10% luminosity
+                    l = l * 90 / 100 + 10;
+                    this.ledRGB.style.stroke = `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`
+                    this.ledRGB.style.strokeWidth = "1.5";
+                    svg.fill(this.ledRGB, `hsl(${h}, ${s}%, ${lx}%)`)
+                    svg.filter(this.ledRGB, null);
                 }
             }
         }
@@ -1062,24 +1043,42 @@ namespace pxsim.visuals {
             svg.child(neopixelmerge, "feMergeNode", { in: "coloredBlur" })
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })
 
-            this.rgbLed = this.element.getElementById("LIGHTBULB_LED") as SVGCircleElement;
             const lcdRect = this.element.getElementById("DISPLAY_SCREEN") as SVGRectElement;
             console.log("### lcdRect : " + this.element + " / " + lcdRect);
             this.lcd = <SVGImageElement>svg.child(lcdRect.parentElement, "image", { x : lcdRect.x.baseVal.value, y : lcdRect.y.baseVal.value, width: lcdRect.width.baseVal.value, height: lcdRect.height.baseVal.value })
 
-            const btnids = ["BTN_A", "BTN_B"];
-            const btnlabels = ["A", "B"];
-            this.buttonsOuter = btnids.map((n, i) => {
+            const btnIds = ["BTN_A", "BTN_B"];
+            const btnLabels = ["A", "B"];
+            this.buttonsOuter = btnIds.map((n, i) => {
                 let btn = this.element.getElementById(n + "_OUTER") as SVGElement;
                 accessibility.makeFocusable(btn);
-                accessibility.setAria(btn, "button", btnlabels[i]);
+                accessibility.setAria(btn, "button", btnLabels[i]);
                 return btn;
             });
             this.buttonsOuter.forEach(b => U.addClass(b, "sim-button-outer"));
-            this.buttons = btnids.map(n => this.element.getElementById(n + "_INNER") as SVGElement);
+            this.buttons = btnIds.map(n => this.element.getElementById(n + "_INNER") as SVGElement);
             this.buttons.forEach(b => U.addClass(b, "sim-button"));
 
-            this.redLED = this.element.getElementById("LED_A") as SVGRectElement;
+            // LED 지정.
+            const ledIds = ["LED"];
+
+            for (let i = 0; i < ledIds.length; i++) {
+                const led = this.element.getElementById(ledIds[i]) as SVGRectElement;
+                // console.log("### led : " + led.x.baseVal.value + " / " + 
+                //     led.y.baseVal.value + " / " + 
+                //     led.width.baseVal.value + " / " + 
+                //     led.height.baseVal.value);
+    
+                const el = this.getView().el;
+                let bl = new BoardLed(led.x.baseVal.value, 
+                    led.y.baseVal.value, 
+                    "#FF0000", 
+                    pinByName(ledIds[i]),
+                    led.width.baseVal.value || 9, 
+                    led.height.baseVal.value || 8)
+                            this.onBoardLeds.push(bl)
+                            el.appendChild(bl.element)
+            }            
 
             this.screenCanvas = document.createElement("canvas");
         }

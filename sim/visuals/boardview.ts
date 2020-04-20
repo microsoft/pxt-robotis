@@ -9,7 +9,7 @@ namespace pxsim.visuals {
         //     wireframe: opts.wireframe
         // });
 
-        return new visuals.BrainPadBoardSvg({
+        return new visuals.CM300BoardSvg({
             runtime: runtime,
             theme: visuals.randomTheme(),
             disableTilt: false,

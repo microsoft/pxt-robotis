@@ -7,7 +7,7 @@ namespace pxsim.visuals {
         private currentValue: number;
         private pin: Pin;
 
-        constructor(private parent: BrainPadBoardSvg, private defs: SVGDefsElement, private id: number, name: string) {
+        constructor(private parent: CM300BoardSvg, private defs: SVGDefsElement, private id: number, name: string) {
             this.pin = board().edgeConnectorState.getPin(this.id);
 
             // Init the button events
