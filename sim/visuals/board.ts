@@ -644,7 +644,7 @@ namespace pxsim.visuals {
 
             const ctx = this.screenCanvas.getContext("2d")
             ctx.imageSmoothingEnabled = false
-            console.log("brain : " + this.board.screenState.width);
+            console.log("### screen : " + this.board.screenState.width);
             const imgdata = ctx.getImageData(0, 0, this.board.screenState.width, this.board.screenState.height)
             const arr = new Uint32Array(imgdata.data.buffer)
         
