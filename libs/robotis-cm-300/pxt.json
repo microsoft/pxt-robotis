@@ -16,7 +16,6 @@
         "serial": "file:../serial",
         "dynamixel": "file:../dynamixel",
         "accelerometer": "file:../accelerometer",
-        "lightRGB": "file:../lightRGB",
         "game": "file:../game"
     },
     "public": true,

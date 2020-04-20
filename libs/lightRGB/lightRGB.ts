@@ -11,7 +11,7 @@ namespace lightRGB {
      * Make the on-board RGB LED show an RGB color (range 0-255 for r, g, b).
      * @param rgb RGB color of the LED
      */
-    //% blockId="rgb_set_color" block="set light bulb to %rgb=colorNumberPicker"
+    //% blockId="rgb_set_color" block="set light to %rgb=colorNumberPicker"
     //% weight=90
     //% blockGap=8
     export function setColor(rgb: number) {
@@ -22,7 +22,7 @@ namespace lightRGB {
     /**
      * Turns off the lightbuld
      */
-    //% blockId=rgb_set_off block="light bulb off"
+    //% blockId=rgb_set_off block="light off"
     //% weight=89
     export function off() {
         lightRGB.setColor(0);
