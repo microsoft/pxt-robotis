@@ -1,4 +1,7 @@
 /**
+ * by kjs 20200422
+ */
+/**
  * Tagged image literal converter
  */
 //% shim=@f4 helper=image::ofBuffer blockIdentity="sprites._createImageShim"
