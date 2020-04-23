@@ -6,7 +6,8 @@
         "device.d.ts",
         "config.ts",
         "board.json",
-        "board.svg"
+        "board.svg",
+        "ns.ts"
     ],
     "core": true,
     "compileServiceVariant": "cm300",
@@ -15,8 +16,10 @@
         "buttons": "file:../buttons",
         "serial": "file:../serial",
         "dynamixel": "file:../dynamixel",
+        "screen---st7735": "file:../screen---st7735",
         "accelerometer": "file:../accelerometer",
-        "game": "file:../game"
+        "mixer---nrf52": "file:../mixer---nrf52",
+        "communication": "file:../communication"
     },
     "public": true,
     "dalDTS": {

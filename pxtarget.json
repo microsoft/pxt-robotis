@@ -35,7 +35,9 @@
         "libs/radio",
         "libs/radio-broadcast",
         "libs/dynamixel",
-        "libs/robotis-cm-300"
+        "libs/robotis-cm-300",
+        "libs/music",
+        "libs/communication"
     ],
     "serial": {
         "useHF2": true,
