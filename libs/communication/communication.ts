@@ -38,7 +38,7 @@ namespace communication {
     //% blockId=set_rf_channel block="RF : 내 채널을 %channel 로 설정"
     //% weight=9
     //% blockGap=8
-    export function setChannel(channel?: Channel) {        
+    export function setChannel(channel?: Channel) {
     }
 
     /**
@@ -47,7 +47,7 @@ namespace communication {
     //% blockId=send_message block="RF : %msg 를 %channel 로 보내기"
     //% weight=8
     //% blockGap=8
-    export function sendMessage(msg?:string, channel?: Channel) {        
+    export function sendMessage(msg?:string, channel?: Channel) {
     }
 
     /**

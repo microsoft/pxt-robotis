@@ -26,6 +26,7 @@ namespace output {
 }
 
 //% color="#68C3E2" weight=98
+//% groups='["LCD"]'
 namespace input {
 
     /**

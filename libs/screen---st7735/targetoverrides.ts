@@ -119,3 +119,36 @@ namespace communication {
     }
 
 }
+
+namespace lcd {
+    /**
+     * LCD 창에 그린 이미지 출력
+     * @param image draw image
+     */
+    //% blockId=image_lcd_display block="LCD 출력 %image=screen_image_picker"
+    //% weight=6
+    //% blockGap=8
+    export function drawImageDisplay(image: Image){
+        if(!image) return;
+    }
+
+    /**
+     * 목록에서 선택한 아이콘 출력
+     * @param image draw icon
+     */
+    //% blockId=icon_lcd_display block="아이콘 출력 %image=robotis_image_picker"
+    //% weight=5
+    //% blockGap=8
+    export function drawIconDisplay(image: Image){
+        if(!image) return;
+    }
+
+    /**
+     * LCD 화면 내용 지우기
+     */
+    //% blockId=clean_lcd_display block="LCD 지우기"
+    //% weight=4
+    //% blockGap=8
+    export function clearDisplay(){
+    }
+}

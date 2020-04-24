@@ -37,7 +37,8 @@
         "libs/dynamixel",
         "libs/robotis-cm-300",
         "libs/music",
-        "libs/communication"
+        "libs/communication",
+        "libs/lcd"
     ],
     "serial": {
         "useHF2": true,
