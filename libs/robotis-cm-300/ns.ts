@@ -9,7 +9,6 @@ namespace communication {
     export function exitProgram() {
         control.reset();
     }
-
 }
 
 //% color="#00852B" weight=99
@@ -24,7 +23,6 @@ namespace output {
     export function exitProgram() {
         control.reset();
     }
-
 }
 
 //% color="#68C3E2" weight=98
