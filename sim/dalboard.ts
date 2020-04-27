@@ -48,12 +48,13 @@ namespace pxsim {
         jacdacState: JacDacState;
         thermometerState: AnalogSensorState;
         thermometerUnitState: TemperatureUnit;
+        irSensorState: IrSensorState;
         microphoneState: AnalogSensorState;
         screenState: ScreenState;
         irState: InfraredState;
         lcdState: LCDState;
         radioState: RadioState;
-        lightRGBState: LightRGBState;
+        lightRgbState: LightRgbState;
         dynamixelState: DynamixelState;
 
         constructor(public boardDefinition: BoardDefinition) {
@@ -114,6 +115,7 @@ namespace pxsim {
             this.lightSensorState = new AnalogSensorState(DAL.DEVICE_ID_LIGHT_SENSOR, 0, 255, 128 / 4, 896 / 4);
             this.thermometerState = new AnalogSensorState(DAL.DEVICE_ID_THERMOMETER, -20, 50, 10, 30);
             this.thermometerUnitState = TemperatureUnit.Celsius;
+            this.irSensorState = new IrSensorState();
             this.irState = new InfraredState();
             this.lcdState = new LCDState();
             this.dynamixelState = new DynamixelState();
@@ -178,7 +180,7 @@ namespace pxsim {
             this.builtinVisuals["screen"] = () => new visuals.ScreenView();
             this.builtinPartVisuals["screen"] = (xy: visuals.Coord) => visuals.mkScreenPart(xy);
 
-            this.builtinParts["lightRGB"] = this.lightRGBState = new LightRGBState();
+            this.builtinParts["lightRgb"] = this.lightRgbState = new LightRgbState();
 
             
             const neopixelPinCfg = getConfig(DAL.CFG_PIN_NEOPIXEL) ||

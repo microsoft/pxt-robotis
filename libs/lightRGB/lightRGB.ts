@@ -4,7 +4,7 @@
  */
 //% groups='["other", "Colors"]'
 //% color="#0078d7" weight=97 icon="\uf0eb"
-namespace lightRGB {
+namespace lightRgb {
     let _brightness: number = 16;
     let _color: number = 0;
     /**
@@ -25,7 +25,7 @@ namespace lightRGB {
     //% blockId=rgb_set_off block="light off"
     //% weight=89
     export function off() {
-        lightRGB.setColor(0);
+        lightRgb.setColor(0);
     }
 
     function update() {
@@ -33,7 +33,7 @@ namespace lightRGB {
         const red = unpackR(c);
         const green = unpackG(c);
         const blue = unpackB(c);
-        __setRGBLed(red, green, blue);
+        __setRgbLed(red, green, blue);
     }
 
     /**

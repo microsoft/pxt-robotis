@@ -1,10 +1,10 @@
 {
-    "name": "lightRGB",
-    "description": "A lightRGB driver",
+    "name": "lightRgb",
+    "description": "A lightRgb driver",
     "files": [
         "README.md",
-        "lightRGB.ts",
-        "lightRGB.cpp",
+        "lightRgb.ts",
+        "lightRgb.cpp",
         "shims.d.ts",
         "ns.ts"
     ],
@@ -12,6 +12,7 @@
         "test.ts"
     ],
     "public": true,
+    "hidden": true,
     "dependencies": {
         "core": "file:../core"
     }

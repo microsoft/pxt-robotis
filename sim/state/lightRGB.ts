@@ -1,6 +1,6 @@
 namespace pxsim {
 
-    export class LightRGBState {
+    export class LightRgbState {
         private r: number;
         private g: number;
         private b: number;
@@ -17,9 +17,9 @@ namespace pxsim {
     }
 }
 
-namespace pxsim.lightRGB {
+namespace pxsim.lightRgb {
     export function __setRGBLed(r: number, g: number, b: number): void {
-        const led = (board() as DalBoard).lightRGBState;
+        const led = (board() as DalBoard).lightRgbState;
         led.setColor(r, g, b);
         runtime.queueDisplayUpdate();
     }

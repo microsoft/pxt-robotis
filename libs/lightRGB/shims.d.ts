@@ -1,5 +1,5 @@
 // Auto-generated. Do not edit.
-declare namespace lightRGB {
+declare namespace lightRgb {
 
     /**
      * Set the rgb led to a specific red, green, blue color.
@@ -7,8 +7,8 @@ declare namespace lightRGB {
      * @param green the green color
      * @param blue the blue color
      */
-    //% shim=lightRGB::__setRGBLed
-    function __setRGBLed(r: int32, g: int32, b: int32): void;
+    //% shim=lightRgb::__setRgbLed
+    function __setRgbLed(r: int32, g: int32, b: int32): void;
 }
 
 // Auto-generated. Do not edit. Really.

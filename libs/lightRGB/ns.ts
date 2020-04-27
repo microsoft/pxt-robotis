@@ -27,6 +27,6 @@ enum Colors {
     Black = 0x000000
 }
 
-//% block="Light RGB"
-namespace lightRGB {
+//% block="Light Rgb"
+namespace lightRgb {
 }

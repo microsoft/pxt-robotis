@@ -1,6 +1,6 @@
 #include "pxt.h"
 
-namespace lightRGB {
+namespace lightRgb {
     /**
      * Set the rgb led to a specific red, green, blue color.
      * @param red the red color
@@ -9,7 +9,7 @@ namespace lightRGB {
      */
      //% 
      
-    void __setRGBLed(int r, int g, int b) {
+    void __setRgbLed(int r, int g, int b) {
 //         auto rp = lookupPin(PC_9);
 //         auto gp = lookupPin(PC_8);
 //         auto bp = lookupPin(PC_6);          
