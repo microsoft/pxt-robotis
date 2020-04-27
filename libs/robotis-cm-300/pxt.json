@@ -20,13 +20,13 @@
         "accelerometer": "file:../accelerometer",
         "mixer---nrf52": "file:../mixer---nrf52",
         "communication": "file:../communication",
-        "lcd": "file:../lcd"
+        "lcd": "file:../lcd",
+        "robotis_input": "file:../robotis_input"
     },
     "public": true,
     "dalDTS": {
         "corePackage": "../core---nrf52"
     },    
     "features": [  
-
     ]
 }

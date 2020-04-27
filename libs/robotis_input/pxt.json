@@ -1,0 +1,12 @@
+{
+    "name": "robotis_input",
+    "description": "ROBOTIS CM-300 - input",
+    "files": [
+        "input.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52"
+    },
+    "hidden": true
+}

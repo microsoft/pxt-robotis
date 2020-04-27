@@ -37,7 +37,7 @@ namespace input {
     //% blockGap=8
     export function exitProgram() {
         control.reset();
-    }
+    }  
 
 }
 
