@@ -15,7 +15,6 @@
         "core---nrf52": "file:../core---nrf52",
         "buttons": "file:../buttons",
         "serial": "file:../serial",
-        "dynamixel": "file:../dynamixel",
         "screen---st7735": "file:../screen---st7735",
         "accelerometer": "file:../accelerometer",
         "mixer---nrf52": "file:../mixer---nrf52",
