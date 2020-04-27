@@ -36,7 +36,6 @@
         "libs/radio-broadcast",
         "libs/dynamixel",
         "libs/robotis-cm-300",
-        "libs/music",
         "libs/communication",
         "libs/lcd"
     ],

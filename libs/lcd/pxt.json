@@ -4,7 +4,7 @@
     "files": [
         "lcd.ts"
     ],
-    "public": true,
+    "public": false,
     "dependencies": {
         "core---nrf52": "file:../core---nrf52"
     }
