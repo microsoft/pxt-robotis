@@ -242,7 +242,7 @@ namespace pxsim.visuals {
     
     const pinNames: { 'name': string, 'touch': number, 'text': any, 'id'?: number, tooltip?: string }[] = [
     ];
-    const MB_WIDTH = 400;
+    const MB_WIDTH = 632;
     const MB_HEIGHT = 400;
 
     export interface IBoardTheme {
@@ -612,6 +612,7 @@ namespace pxsim.visuals {
         private shakeButtonGroup: SVGElement;
         private shakeText: SVGTextElement;
         private screenCanvas: HTMLCanvasElement;
+        public  onDxls: BoardDxl[];
 
         public board: pxsim.DalBoard;
         private pinNmToCoord: Map<Coord> = {
@@ -622,6 +623,7 @@ namespace pxsim.visuals {
             this.irSensorGradient = [];
             this.irSensor = [];
             this.irSensorText = [];
+            this.onDxls = []
 
             this.fixPinIds();
             this.buildDom();
@@ -745,9 +747,10 @@ namespace pxsim.visuals {
 
             // this.updateLedRgb();
             this.onBoardLeds.forEach(l => l.updateState());
+            this.onDxls.forEach(l => l.updateState());
 
             this.updateGestures();
-
+            
             this.updateSound();
             this.updateLightLevel();
             this.updateTemperature();
@@ -1170,8 +1173,18 @@ namespace pxsim.visuals {
                     led.height.baseVal.value || 8)
                             this.onBoardLeds.push(bl)
                             el.appendChild(bl.element)
-            }            
+            }         
+            
+            //다이나믹셀
+            const dynmixels = ["hole", "hole-7"];
 
+            for (let i = 0; i < dynmixels.length; i++) {
+                const dxl = this.element.getElementById(dynmixels[i]) as SVGRectElement;
+                const el = this.getView().el;
+                let bl = new BoardDxl(el);
+                this.onDxls.push(bl);
+                el.appendChild(dxl);
+            }
             this.screenCanvas = document.createElement("canvas");
         }
 

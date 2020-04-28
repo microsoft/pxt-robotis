@@ -7,6 +7,18 @@ declare namespace dynamixel {
     //% shim=dynamixel::internalCreateDXLDevice
     function internalCreateDXLDevice(tx: DigitalInOutPin, rx: DigitalInOutPin, dir: DigitalInOutPin, id: int32): DynamixelDevice;
 }
+declare namespace dxl {
+
+    /**
+     */
+    //% shim=dxl::__setPosition
+    function __setPosition(id: int32, angle: int32): void;
+
+    /**
+     */
+    //% shim=dxl::__setVelocity
+    function __setVelocity(id: int32, velocity: int32): void;
+}
 
 
 declare interface DynamixelDevice {

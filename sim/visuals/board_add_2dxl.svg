@@ -1,6 +1,5 @@
-namespace pxsim.visuals {
-  export const BOARD_SVG = `
-  <svg
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -98,6 +97,14 @@ namespace pxsim.visuals {
   <g
      transform="matrix(3.5831483,0,0,3.6375475,268.68312,85.676822)"
      id="LM_total">
+    <image
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAYAAACMo1E1AAAAAXNSR0IArs4c6QAAAu1JREFUWAnNmD1y1EAQhb1bhJgjsMT8HAEuQGJHRJyOhAwCTmAyQqpMvOsbYDtGvE/Mm+oZaWUtaHfoqt75n/70WquSZtV13dkhtpKF+Y9V38gpbfeq7OSU2RTnsEBauZq7JkHVMIBdyiltgH2SU9oy8CGQs+AEdq4oALyQR5gaFpgMQiOZga/V3gnwzgNT5SRcUguw1/L3cuCAjGlcqV1bV3UYGLgP8q/yu4dUfFRtkpuVWoABCOgYTF6XKvUc1nFhT+VcGH6tGJMqjiqXwN5og6gWAZYwUkqareLV3jRr4Cy6FgHxVv5F/lP+S06alnT2ZG9iEOs8Mrheg5GOV/KPchYvCTS2FzGIRcw+iwajXKszGqo9T0792DYdz6SiYKLTeav62JUeo49Yo+nt06rBU6ezvkin9yUsFsxp5a99ynQqXGFkbSOHI9s6PWgZuJQ/k6NiCwOsAIzK+QHZAgxBLNAmCVb8W1spZjFQrhDIyrUGMyAcmQW4AbFnNigLFuByrlXP1A3AiB1Z+nuuoG0AFUMWLL7n4oSWdd77buSUvXJFB52NrFPcnTy/4qNc7GBCSyuEAq7oaEmWYmeBfM/ljsZwBYfhYCoGGkAOMmi4wcCJ4RAm3/t6ZeqFWqeKB7aa1EpBBIKDsreo3A/14LM+eP8sX+zXX2QZrN/Zb51q/J+v6QHwiSDfyb/Lj/FJyC0Tfe/3A0xOq9b0hrynSi8Xv5X3xxOCGdxOBZwmcFV5ger+ClN1UQOEL/5vqRyAEW1wVsIV6DX5ikEZNyhnHBs59+S/GhcPCAc5KAbgNomiammjZyVMSeclQAEXD3L6YX4OMKD8qPAZyYMnTQPlHDApyEY3aWM2B5Z3LpeqZlulGiDRIhRvHOy5Y/84aay+V7k4OahoMD4jAbS5n3bxIE3tDKX2/b40sjjaLDgW+HNNVYNQ2gC9SI3PKgG0WbnZUF44G84LKAOouw1Mu1aOI4861V43Wf4V3OSOCw7+BmjmA7QisxQnAAAAAElFTkSuQmCC"
+       height="38"
+       width="38"
+       y="0"
+       x="44"
+       style="opacity:0.3;mix-blend-mode:multiply"
+       id="image51" />
     <g
        style="fill-rule:nonzero"
        transform="translate(45,1)"
@@ -234,6 +241,3 @@ namespace pxsim.visuals {
     </g>
   </g>
 </svg>
-
-`;
-}

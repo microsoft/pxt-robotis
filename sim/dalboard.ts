@@ -56,6 +56,8 @@ namespace pxsim {
         radioState: RadioState;
         lightRgbState: LightRgbState;
         dynamixelState: DynamixelState;
+        dxlState: DxlState;
+        dxlState_2: DxlState;
 
         constructor(public boardDefinition: BoardDefinition) {
             super();
@@ -182,6 +184,8 @@ namespace pxsim {
 
             this.builtinParts["lightRgb"] = this.lightRgbState = new LightRgbState();
 
+            this.builtinParts["hole"] = this.dxlState = new DxlState(1, 0);
+            this.builtinParts["hole-7"] = this.dxlState_2 = new DxlState(2,0);
             
             const neopixelPinCfg = getConfig(DAL.CFG_PIN_NEOPIXEL) ||
                 getConfig(DAL.CFG_PIN_DOTSTAR_DATA);
@@ -213,6 +217,13 @@ namespace pxsim {
         kill() {
             super.kill();
             AudioContextManager.stop();
+        }
+
+        getDxl(): DxlState{
+            return this.dxlState;
+        }
+        getDxl_2(): DxlState{
+            return this.dxlState_2;
         }
 
         initAsync(msg: SimulatorRunMessage): Promise<void> {
@@ -293,5 +304,9 @@ namespace pxsim {
     export function parsePinString(pinString: string): Pin {
         const pinName = pinString && pxsim.readPin(pinString);
         return pinName && pxtcore.getPin(pinIds[pinName]);
+    }
+
+    export function currentboard(): DalBoard {
+        return runtime.board as DalBoard;
     }
 }
