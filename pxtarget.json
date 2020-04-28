@@ -35,6 +35,8 @@
         "libs/radio",
         "libs/radio-broadcast",
         "libs/dynamixel",
+        "libs/lightRgb",
+        "libs/irSensor",
         "libs/robotis-cm-300"
     ],
     "serial": {
@@ -57,7 +59,7 @@
         "autoRun": true,
         "streams": false,
         "aspectRatio": 1.0,
-        "parts": true,
+        "parts": false,
         "partsAspectRatio": 0.69,
         "dynamicBoardDefinition": true
     },
