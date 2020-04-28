@@ -1,0 +1,12 @@
+{
+    "name": "robotis_output",
+    "description": "ROBOTIS CM-300 - output",
+    "files": [
+        "output.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52"
+    },
+    "hidden": true
+}

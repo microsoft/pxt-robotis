@@ -38,7 +38,8 @@
         "libs/robotis-cm-300",
         "libs/lcd",
         "libs/communication",
-        "libs/robotis_input"
+        "libs/robotis_input",
+        "libs/robotis_output"
     ],
     "serial": {
         "useHF2": true,
