@@ -3,7 +3,7 @@
  */
 //% block="DYNAMIXEL"
 //% color=#000000 weight=89 icon="\uf085"
-namespace dynamixel {
+    namespace dynamixel {
     export class Dynamixel {
         dxlDevice: DynamixelDevice;
         constructor(dxlDevice: DynamixelDevice) {
@@ -30,7 +30,7 @@ namespace dynamixel {
             if (_device.dxlDevice.getPortBaudRate() != 1000000) {
                 _device.dxlDevice.setPortBaudRate(DXLBaudRate.BaudRate1M);
             }
-        }        
+        }
         return _device;
     }
 
