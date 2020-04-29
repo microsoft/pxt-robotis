@@ -173,6 +173,7 @@ namespace dynamixel {
                 data.setNumber(NumberFormat.UInt32LE, 0, value);
                 d.dxlDevice.write(id, 116, data);
             }
+            dxl.__setPosition(id, value);
         }
     }
     
@@ -209,6 +210,7 @@ namespace dynamixel {
                 d.dxlDevice.write(id, 104, data);
             }
         }
+        dxl.__setVelocity(id, value);
     }
     
     /**
