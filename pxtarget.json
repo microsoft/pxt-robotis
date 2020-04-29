@@ -40,7 +40,8 @@
         "libs/communication",
         "libs/robotis_input",
         "libs/robotis_output",
-        "libs/robotis_control"
+        "libs/robotis_control",
+        "libs/robotis_event"
     ],
     "serial": {
         "useHF2": true,
@@ -81,7 +82,7 @@
     },
     "runtime": {
         "mathBlocks": true,
-        "loopsBlocks": true,
+        "loopsBlocks": false,
         "logicBlocks": true,
         "variablesBlocks": true,
         "textBlocks": true,
@@ -91,8 +92,8 @@
             "useNewFunctions": true,
             "extraFunctionEditorTypes": []
         },
-        "onStartNamespace": "loops",
-        "onStartColor": "#40bf4a",
+        "onStartNamespace": "event",
+        "onStartColor": "#68C3E2",
         "onStartWeight": 100,
         "pauseUntilBlock": {},
         "breakBlock": true,

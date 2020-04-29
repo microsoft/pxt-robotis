@@ -1,3 +1,15 @@
+//% color="#68C3E2" weight=101
+namespace event {
+    /**
+     * Exits the program to the main menu. (in the simulator restarts it)
+     */
+    //% blockId=loopstop12 block="exit program"
+    //% weight=10
+    //% blockGap=8
+    export function exitProgram() {
+        control.reset();
+    }
+}
 //% color="#68C3E2" weight=100
 namespace communication {
     /**
@@ -68,3 +80,4 @@ namespace control {
         control.reset();
     }
 }
+
