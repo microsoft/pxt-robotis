@@ -21,7 +21,8 @@
         "communication": "file:../communication",
         "lcd": "file:../lcd",
         "robotis_input": "file:../robotis_input",
-        "robotis_output": "file:../robotis_output"
+        "robotis_output": "file:../robotis_output",
+        "robotis_control": "file:../robotis_control"
     },
     "public": true,
     "dalDTS": {

@@ -39,7 +39,8 @@
         "libs/lcd",
         "libs/communication",
         "libs/robotis_input",
-        "libs/robotis_output"
+        "libs/robotis_output",
+        "libs/robotis_control"
     ],
     "serial": {
         "useHF2": true,

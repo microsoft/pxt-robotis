@@ -53,3 +53,18 @@ namespace lcd {
         control.reset();
     }
 }
+
+//% color="#00852B" weight=96 advanced=false
+//% groups='["ROBOTIS"]'
+namespace control {
+    /**
+     * Exits the program to the main menu. (in the simulator restarts it)
+     */
+    //% blockId=loopstop4 block="exit program"
+    //% weight=10
+    //% blockGap=8
+    //% group="ROBOTIS"
+    export function exitProgram() {
+        control.reset();
+    }
+}
