@@ -228,4 +228,7 @@ namespace dynamixel {
         }
         return value;
     }    
-}
+
+} // namespace dynamixel
+
+
