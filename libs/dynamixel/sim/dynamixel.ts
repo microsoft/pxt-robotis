@@ -7,6 +7,14 @@ namespace pxsim.dynamixel {
         const b = board() as any as DynamixelBoard;
         return b?.dynamixelState?.createDXLDevice(tx, rx, dir, id);
     }
+
+    export function setPosition(device:DynamixelDevice, id:number, position:number):void{
+        return device.setPosition(id, position);
+    }
+
+    export function setVelocity(device:DynamixelDevice, id:number, velocity:number):void{
+        return device.setVelocity(id, velocity);
+    }
 }
 
 namespace pxsim.DynamixelDeviceMethods {

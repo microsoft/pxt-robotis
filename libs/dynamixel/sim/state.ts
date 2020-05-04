@@ -55,18 +55,20 @@ namespace pxsim {
 
         /**
          */
-        //% shim=dxl::__setPosition
+        //% shim=dynamixel::__setPosition
         setPosition(id:number, position: number): void{
-            console.log("test");
-            return pxsim.dxl.__setPosition(id, position);
+            // console.log("test");
+            // //return pxsim.dxl.__setPosition(id, position);
+            // return pxsim.dynamixel.__setPosition(id, position);
         }
 
         /**
          */
-        //% shim=dxl::__setVelocity
+        //% shim=dynamixel::__setVelocity
         setVelocity(id:number, velocity: number): void{
-            console.log("test");
-            return pxsim.dxl.__setVelocity(id, velocity);
+            // console.log("test");
+            // //return pxsim.dxl.__setVelocity(id, velocity);
+            // return pxsim.dynamixel.__setVelocity(id, velocity);
         }
     }
 }

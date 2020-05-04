@@ -29,7 +29,7 @@ namespace pxsim {
     }
 }
 
-namespace pxsim.dxl {
+namespace pxsim.dynamixel {
     export function __setVelocity(id:number, velocity:number): void{
         let dxl;
         let dxl_2;
