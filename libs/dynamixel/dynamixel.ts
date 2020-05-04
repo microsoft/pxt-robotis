@@ -30,7 +30,7 @@ namespace dynamixel {
             if (_device.dxlDevice.getPortBaudRate() != 1000000) {
                 _device.dxlDevice.setPortBaudRate(DXLBaudRate.BaudRate1M);
             }
-        }        
+        }
         return _device;
     }
 
@@ -225,6 +225,6 @@ namespace dynamixel {
             value = d.dxlDevice.read(id, 128, 4).getNumber(NumberFormat.Int32LE, 0);
         }
         return value;
-    }    
+    }
 
 } // namespace dynamixel
