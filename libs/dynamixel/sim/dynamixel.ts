@@ -39,12 +39,12 @@ namespace pxsim.DynamixelDeviceMethods {
     }
 }
 
-namespace pxsim.dxl{
-    export function setPosition(device:DynamixelDevice, id:number, position:number):void{
-        return device.setPosition(id, position);
-    }
+// namespace pxsim.dxl{
+//     export function setPosition(device:DynamixelDevice, id:number, position:number):void{
+//         return device.setPosition(id, position);
+//     }
 
-    export function setVelocity(device:DynamixelDevice, id:number, velocity:number):void{
-        return device.setVelocity(id, velocity);
-    }
-}
+//     export function setVelocity(device:DynamixelDevice, id:number, velocity:number):void{
+//         return device.setVelocity(id, velocity);
+//     }
+// }
