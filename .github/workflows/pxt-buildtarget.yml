@@ -3,7 +3,7 @@ name: pxt-buildtarget
 on:
   push:
     branches: 
-      - master
+      - feature-modify_board_sim
   create:
 
 jobs:
