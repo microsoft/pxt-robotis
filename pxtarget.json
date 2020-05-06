@@ -35,8 +35,7 @@
         "libs/radio",
         "libs/radio-broadcast",
         "libs/dynamixel",
-        "libs/lightRgb",
-        "libs/irSensor",
+        
         "libs/robotis-cm-300"
     ],
     "serial": {
