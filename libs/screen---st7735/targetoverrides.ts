@@ -125,7 +125,7 @@ namespace lcd {
      * LCD 창에 그린 이미지 출력
      * @param image draw image
      */
-    //% blockId=image_lcd_display block="LCD 출력 %image=screen_image_picker"
+    //% blockId=image_lcd_display block="LCD 출력 %image=background_image_picker"
     //% weight=6
     //% blockGap=8
     export function drawImageDisplay(image: Image){
