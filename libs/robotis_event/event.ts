@@ -1,11 +1,11 @@
 
 enum BUTTON_KIND{
     //% block="A"
-    buttonA,
+    buttonA = 0,
     //% block="B"
-    buttonB,
+    buttonB = 1,
     //%block="A+B"
-    buttonAB
+    buttonAB = 2
 }
 
 enum CONTROLLER_STATE {

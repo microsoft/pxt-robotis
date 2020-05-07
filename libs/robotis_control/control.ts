@@ -17,7 +17,9 @@ namespace control {
     //% group="ROBOTIS"
     //% weight=5
     export function repeatForever(handler: () => void) {
-
+        while(true){
+            handler();
+        }
     }
 
     /**
@@ -28,7 +30,9 @@ namespace control {
     //% group="ROBOTIS"
     //% weight=4
     export function repeatCount(count: number, handler: () => void) {
-
+        for (let i = 0; i < count; i++) {
+            handler();
+        }
     }
 
     /**
@@ -39,7 +43,9 @@ namespace control {
     //% group="ROBOTIS"
     //% weight=3
     export function repeatBool(isBool: boolean, handler: () => void) {
-
+        while(isBool){
+            handler();
+        }
     }
 
     /**
@@ -52,7 +58,19 @@ namespace control {
     //% ms.fieldEditor="numberdropdown" ms.fieldOptions.decompileLiterals=true
     //% ms.fieldOptions.data='[["100 ms", 100],["200 ms", 200],["500 ms", 500],["1 second", 1000],["2 second", 2000],["3 second", 3000]]'
     export function waitForSecnods(ms: number) {
+        (async () => { 
+            // Do something before delay
+            console.log('before delay')
+    
+            await delay(ms);
+    
+            // Do something after
+            console.log('after delay')
+        })();
+    }
 
+    function delay(ms: number) {
+        return new Promise( resolve => setTimeout(resolve, ms) );
     }
 
     /**
