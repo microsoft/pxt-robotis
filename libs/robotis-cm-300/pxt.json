@@ -16,7 +16,7 @@
         "serial": "file:../serial",
         "dynamixel": "file:../dynamixel",
         "accelerometer": "file:../accelerometer",
-        "irSensor": "file:../irSensor",
+        "irsensor": "file:../irsensor",
         "game": "file:../game"
     },
     "public": true,

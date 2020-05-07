@@ -1,4 +1,0 @@
-# irSensor
-
-The irSensor library.
-
