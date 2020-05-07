@@ -41,7 +41,9 @@
         "libs/robotis_input",
         "libs/robotis_output",
         "libs/robotis_control",
-        "libs/robotis_event"
+        "libs/robotis_event",
+        "libs/lightRgb",
+        "libs/irSensor"
     ],
     "serial": {
         "useHF2": true,
@@ -63,7 +65,7 @@
         "autoRun": true,
         "streams": false,
         "aspectRatio": 1.0,
-        "parts": true,
+        "parts": false,
         "partsAspectRatio": 0.69,
         "dynamicBoardDefinition": true
     },

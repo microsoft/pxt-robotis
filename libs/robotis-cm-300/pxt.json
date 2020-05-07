@@ -23,7 +23,8 @@
         "robotis_input": "file:../robotis_input",
         "robotis_output": "file:../robotis_output",
         "robotis_control": "file:../robotis_control",
-        "robotis_event": "file:../robotis_event"
+        "robotis_event": "file:../robotis_event",
+        "irSensor": "file:../irSensor"
     },
     "public": true,
     "dalDTS": {

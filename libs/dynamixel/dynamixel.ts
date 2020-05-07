@@ -3,7 +3,7 @@
  */
 //% block="DYNAMIXEL"
 //% color=#000000 weight=89 icon="\uf085"
-namespace dynamixel {
+    namespace dynamixel {
     export class Dynamixel {
         dxlDevice: DynamixelDevice;
         constructor(dxlDevice: DynamixelDevice) {
@@ -173,6 +173,8 @@ namespace dynamixel {
                 data.setNumber(NumberFormat.UInt32LE, 0, value);
                 d.dxlDevice.write(id, 116, data);
             }
+
+            dxl.__setPosition(id, value);
         }
     }
     
@@ -208,6 +210,8 @@ namespace dynamixel {
                 data.setNumber(NumberFormat.Int32LE, 0, value);
                 d.dxlDevice.write(id, 104, data);
             }
+
+            dxl.__setVelocity(id, value);
         }
     }
     
@@ -225,6 +229,11 @@ namespace dynamixel {
             value = d.dxlDevice.read(id, 128, 4).getNumber(NumberFormat.Int32LE, 0);
         }
         return value;
+<<<<<<< HEAD
     }
 
 } // namespace dynamixel
+=======
+    }    
+} // namespace dynamixel
+>>>>>>> master

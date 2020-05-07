@@ -12,6 +12,8 @@
     "include": [
         "*.ts",
         "visuals/*.ts",
-        "../libs/dynamixel/sim/*.ts"
+        "state/*.ts",
+        "../libs/dynamixel/sim/*.ts",
+        "../libs/irSensor/sim/*.ts"
     ]
 }

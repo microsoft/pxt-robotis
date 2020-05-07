@@ -52,5 +52,22 @@ namespace pxsim {
         write(id: number, addr: number, buffer: RefBuffer): void {
             // TODO
         }
+
+        /**
+         */
+        //% shim=dxl::__setPosition
+        setPosition(id:number, position: number): void{
+            console.log("test");
+            return pxsim.dxl.__setPosition(id, position);
+        }
+
+        /**
+         */
+        //% shim=dxl::__setVelocity
+        setVelocity(id:number, velocity: number): void{
+            console.log("test");
+            return pxsim.dxl.__setVelocity(id, velocity);
+        }
     }
 }
+
