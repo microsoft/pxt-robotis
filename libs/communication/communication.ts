@@ -20,7 +20,7 @@ enum Signal {
     signal4,
 }
 
-//% color="#68C3E2" weight=100
+//% color="#C8509B" weight=100
 namespace communication {
     
     /**

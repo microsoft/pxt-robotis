@@ -10,7 +10,7 @@ namespace event {
         control.reset();
     }
 }
-//% color="#68C3E2" weight=100
+//% color="#C8509B" weight=100
 namespace communication {
     /**
      * Exits the program to the main menu. (in the simulator restarts it)
@@ -23,7 +23,7 @@ namespace communication {
     }
 }
 
-//% color="#00852B" weight=99
+//% color="#D67923" weight=99
 namespace output {
 
     /**
@@ -37,7 +37,7 @@ namespace output {
     }
 }
 
-//% color="#68C3E2" weight=98
+//% color="#5F3109" weight=98
 //% groups='["LCD"]'
 namespace input {
 
@@ -53,7 +53,7 @@ namespace input {
 
 }
 
-//% color="#00852B" weight=97
+//% color="#EF2D56" weight=97
 namespace lcd {
     /**
      * Exits the program to the main menu. (in the simulator restarts it)
@@ -66,7 +66,7 @@ namespace lcd {
     }
 }
 
-//% color="#00852B" weight=96 advanced=false
+//% color="#011C32" weight=96 advanced=false
 //% groups='["ROBOTIS"]'
 namespace control {
     /**

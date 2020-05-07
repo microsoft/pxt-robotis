@@ -49,7 +49,7 @@ enum ON_OFF {
     off
 }
 
-//% color="#00852B" weight=99
+//% color="#D67923" weight=99
 namespace output {
     /**
      * 선택한 번호/모든 모터 바퀴/관절 모드로 설정

@@ -7,7 +7,7 @@ enum BLOCKTYPE{
     TYPE2
 }
 
-//% color="#00852B" weight=96 advanced=false
+//% color="#011C32" weight=96 advanced=false
 //% groups='["ROBOTIS"]'
 namespace control {
     /**

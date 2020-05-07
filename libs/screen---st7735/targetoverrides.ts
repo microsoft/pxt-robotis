@@ -120,6 +120,7 @@ namespace communication {
 
 }
 
+//% color="#EF2D56" weight=97
 namespace lcd {
     /**
      * LCD 창에 그린 이미지 출력

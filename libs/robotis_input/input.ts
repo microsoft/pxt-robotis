@@ -37,7 +37,7 @@ enum MICSOUNDTYPE {
     FINAL
 }
 
-//% color="#68C3E2" weight=98
+//% color="#5F3109" weight=98
 //% groups=['ROBOTIS']
 namespace input {
     /**
