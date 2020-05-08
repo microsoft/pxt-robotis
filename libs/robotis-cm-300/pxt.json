@@ -16,7 +16,10 @@
         "serial": "file:../serial",
         "dynamixel": "file:../dynamixel",
         "accelerometer": "file:../accelerometer",
-        "game": "file:../game"
+        "game": "file:../game",
+        "powerCheck": "file:../powerCheck",
+        "analogJoysick": "file:../analogJoysick",
+        "RobotisIR": "file:../RobotisIR"
     },
     "public": true,
     "dalDTS": {

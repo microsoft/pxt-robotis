@@ -856,7 +856,6 @@ declare const enum DAL {
     ACCELEROMETER_TYPE_MMA8653 = 58,
     ACCELEROMETER_TYPE_MSA300 = 76,
     ACCELEROMETER_TYPE_MPU6050 = 104,
-    ACCELEROMETER_TYPE_ICM20600 = 104,
     DISPLAY_TYPE_ST7735 = 7735,
     DISPLAY_TYPE_ILI9341 = 9341,
     CFG_PIN_A0 = 100,
@@ -1182,7 +1181,6 @@ declare const enum DAL {
     // /pxtapp/platform.h
     PAGE_SIZE = 4096,
     IMAGE_BITS = 4,
-    DEFAULT_NEOPIXEL_PIN = 0,
     TEMPERATURE_NOMINAL_VALUE = 25,
     TEMPERATURE_NOMINAL_READING = 10000,
     TEMPERATURE_BETA = 3380,
@@ -1319,6 +1317,11 @@ declare const enum DAL {
     Space = 32,
     Tab = 9,
     Pipe = 124,
+    // /pxtapp/settings/Flash.h
+    DEVICE_FLASH_ERROR = 922,
+    // /pxtapp/settings/RAFFS.h
+    RAFFS_FOLLOWING_MASK = 32768,
+    RAFFS_FLASH_BUFFER_SIZE = 64,
     // /pxtapp/uf2format.h
     BOOTLOADER_START = 0,
     BOOTLOADER_END = 8192,

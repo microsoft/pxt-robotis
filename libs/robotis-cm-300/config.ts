@@ -3,16 +3,28 @@ namespace config {
 
     export const PIN_BTN_A = DAL.P1_10; //START BUTTON
     export const PIN_BTN_B = DAL.P1_13; //MODE BUTTON
-
+    
     //Sensors
-    export const PIN_LIGHT = DAL.P0_29;
+    export const PIN_PWREN = DAL.P0_0;
     export const PIN_BATTSENSE = DAL.P0_31;
+    
     export const PIN_ACCELEROMETER_SCL = DAL.P1_9;
     export const PIN_ACCELEROMETER_SDA = DAL.P0_11;
-    export const PIN_ACCELEROMETER_INT = DAL.P0_5;
+    export const PIN_ACCELEROMETER_INT = DAL.P1_8;
+
+    //Robotis IR
+    export const PIN_A5 = DAL.P0_29;
+    export const PIN_A3 = DAL.P0_3;
+    export const PIN_A6 = DAL.P0_30;
+    export const PIN_A0 = DAL.P0_2;
+    export const PIN_A4 = DAL.P0_28;
+    export const PIN_D9 = DAL.P0_9;
+    export const PIN_D12 = DAL.P1_12;
+    export const PIN_D11 = DAL.P1_11;
 
     //Actuators
-
+    export const PIN_SERVO_1 = DAL.P0_5;
+    export const PIN_SERVO_2 = DAL.P0_4;
 
     //Communication
     export const PIN_RX = DAL.P0_27;

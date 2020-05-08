@@ -35,6 +35,9 @@
         "libs/radio",
         "libs/radio-broadcast",
         "libs/dynamixel",
+        "libs/powerCheck",
+        "libs/analogJoysick",
+        "libs/RobotisIR",
         "libs/robotis-cm-300"
     ],
     "serial": {
