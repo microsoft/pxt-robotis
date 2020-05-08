@@ -1,15 +1,15 @@
 /// <reference path="../../../built/common-sim.d.ts"/>
 
 namespace pxsim {
-    export interface IrSensorBoard extends CommonBoard {
-        irSensorState: IrSensorState;
+    export interface irsensorBoard extends CommonBoard {
+        irsensorState: IrsensorState;
     }
 
-    export function irSensorState(): IrSensorState {
-        return (board() as IrSensorBoard).irSensorState;
+    export function irsensorState(): IrsensorState {
+        return (board() as irsensorBoard).irsensorState;
     }
 
-    export class IrSensorState {
+    export class IrsensorState {
         public sensorUsed: boolean = false;
         public level: number[];
 

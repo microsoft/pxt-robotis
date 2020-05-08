@@ -27,11 +27,11 @@ namespace input {
 * @param temperature the temperature at which this event happens, eg: 15
 * @param unit the unit of the temperature
 */
-//% blockId=input_on_irSensor_condition_changed block="on irSensor %id |at %temperature|%unit"
+//% blockId=input_on_irsensor_condition_changed block="on irsensor %id |at %temperature|%unit"
 //% parts="thermometer"
 //% help=input/on-temperature-condition-changed blockExternalInputs=0
 //% group="More" weight=76
-void onIrSensorConditionChanged(int id, int temperature, TemperatureUnit unit, Action handler) {
+void onirsensorConditionChanged(int id, int temperature, TemperatureUnit unit, Action handler) {
     auto thermo = getWTemp();
     if (!thermo) return;
 
@@ -47,11 +47,11 @@ void onIrSensorConditionChanged(int id, int temperature, TemperatureUnit unit, A
  * Get the temperature in Celsius or Fahrenheit degrees.
  */
 //% help=input/temperature
-//% blockId=device_irSensor block="irSensor in %id"
+//% blockId=device_irsensor block="irsensor in %id"
 //% id.defl=0 id.min=0 id.max=4
-//% parts="irSensor"
+//% parts="irsensor"
 //% weight=26
-int irSensor(int id) {
+int irsensor(int id) {
     auto thermo = getWTemp();
     // default to 21 if not present
     int value = (NULL != thermo) ? thermo->sensor.getValue() : 21;

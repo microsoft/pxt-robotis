@@ -2,27 +2,27 @@
 
 namespace pxsim.input {
 
-    export function irSensor(id: number): number {
-        let b = irSensorState();
+    export function irsensor(id: number): number {
+        let b = irsensorState();
         b.setUsed();
         
         return b.getLevel(id);
     }
 
-    export function onIrSensorConditionChanged(id: number, value: number, body: RefAction) {
-        let b = irSensorState();
+    export function onirsensorConditionChanged(id: number, value: number, body: RefAction) {
+        let b = irsensorState();
         b.setUsed();
 
         pxtcore.registerWithDal(id, value, body);
     }
 
-    // export function onIrSensorConditionChanged(condition: number, temperature: number, unit: number, body: RefAction) {
-    //     console.log("### onIrSensorConditionChanged()");
-    //     let b = irSensorState();
+    // export function onirsensorConditionChanged(condition: number, temperature: number, unit: number, body: RefAction) {
+    //     console.log("### onirsensorConditionChanged()");
+    //     let b = irsensorState();
 
     //     b.setUsed();
 
-    //     // setIrSensorUnit(unit);
+    //     // setirsensorUnit(unit);
 
     //     const t = unit == pxsim.TemperatureUnit.Celsius 
     //         ? temperature 

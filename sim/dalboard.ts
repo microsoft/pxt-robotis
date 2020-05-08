@@ -48,7 +48,7 @@ namespace pxsim {
         jacdacState: JacDacState;
         thermometerState: AnalogSensorState;
         thermometerUnitState: TemperatureUnit;
-        irSensorState: IrSensorState;
+        irsensorState: IrsensorState;
         microphoneState: AnalogSensorState;
         screenState: ScreenState;
         irState: InfraredState;
@@ -117,7 +117,7 @@ namespace pxsim {
             this.lightSensorState = new AnalogSensorState(DAL.DEVICE_ID_LIGHT_SENSOR, 0, 255, 128 / 4, 896 / 4);
             this.thermometerState = new AnalogSensorState(DAL.DEVICE_ID_THERMOMETER, -20, 50, 10, 30);
             this.thermometerUnitState = TemperatureUnit.Celsius;
-            this.irSensorState = new IrSensorState();
+            this.irsensorState = new IrsensorState();
             this.irState = new InfraredState();
             this.lcdState = new LCDState();
             this.dynamixelState = new DynamixelState();

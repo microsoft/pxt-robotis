@@ -14,7 +14,7 @@
         "visuals/*.ts",
         "state/*.ts",
         "../libs/dynamixel/sim/*.ts",
-        "../libs/irSensor/sim/*.ts"
+        "../libs/irsensor/sim/*.ts"
     ]
 }
 
