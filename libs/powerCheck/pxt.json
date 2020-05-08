@@ -1,0 +1,15 @@
+{
+    "name": "powerCheck",
+    "description": "A battery power check driver",
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52"
+    },
+    "files": [
+        "README.md",
+        "powercheck.cpp",
+        "powercheck.h",
+        "shims.d.ts",
+        "enums.d.ts"
+    ],
+    "public": true
+}
