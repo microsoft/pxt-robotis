@@ -1,0 +1,17 @@
+{
+    "name": "analogJoysick",
+    "description": "A analogJoysick driver",
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52"
+    },
+    "files": [
+        "README.md",
+        "analogJoysick.cpp",
+        "analogJoysick.h",
+        "shims.d.ts",
+        "enums.d.ts",
+        "ns.ts"
+    ],
+    "public": true
+
+}
