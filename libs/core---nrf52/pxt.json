@@ -8,6 +8,7 @@
         "screen---st7735": "file:../screen---st7735",
         "serial": "file:../serial",
         "mixer---nrf52": "file:../mixer---nrf52",
-        "dynamixel": "file:../dynamixel"
+        "dynamixel": "file:../dynamixel",
+        "irsensor": "file:../irsensor"
     }
 }
