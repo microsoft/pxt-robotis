@@ -131,6 +131,8 @@ namespace lcd {
     //% blockGap=8
     export function drawImageDisplay(image: Image){
         if(!image) return;
+        screen.fill(0);
+        screen.drawImage(image,0,0);
     }
 
     /**
@@ -142,6 +144,8 @@ namespace lcd {
     //% blockGap=8
     export function drawIconDisplay(image: Image){
         if(!image) return;
+        screen.fill(0);
+        screen.drawImage(image,0,0);
     }
 
     /**
@@ -151,5 +155,6 @@ namespace lcd {
     //% weight=4
     //% blockGap=8
     export function clearDisplay(){
+        screen.fill(0);
     }
 }

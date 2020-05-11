@@ -24,7 +24,8 @@
         "robotis_output": "file:../robotis_output",
         "robotis_control": "file:../robotis_control",
         "robotis_event": "file:../robotis_event",
-        "irSensor": "file:../irSensor"
+        "irSensor": "file:../irSensor",
+        "dynamixel": "file:../dynamixel"
     },
     "public": true,
     "dalDTS": {

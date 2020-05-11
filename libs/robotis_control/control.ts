@@ -58,19 +58,22 @@ namespace control {
     //% ms.fieldEditor="numberdropdown" ms.fieldOptions.decompileLiterals=true
     //% ms.fieldOptions.data='[["100 ms", 100],["200 ms", 200],["500 ms", 500],["1 second", 1000],["2 second", 2000],["3 second", 3000]]'
     export function waitForSecnods(ms: number) {
-        (async () => { 
-            // Do something before delay
-            console.log('before delay')
+
+        delay(ms);
+        // (async () => { 
+        //     // Do something before delay
+        //     console.log('before delay')
     
-            await delay(ms);
+        //     await delay(ms);
     
-            // Do something after
-            console.log('after delay')
-        })();
+        //     // Do something after
+        //     console.log('after delay')
+        // })();
     }
 
     function delay(ms: number) {
-        return new Promise( resolve => setTimeout(resolve, ms) );
+        // return new Promise( resolve => setTimeout(resolve, ms) );
+        return setTimeout(function() {  }, ms);
     }
 
     /**

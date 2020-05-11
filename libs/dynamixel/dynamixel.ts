@@ -229,11 +229,5 @@
             value = d.dxlDevice.read(id, 128, 4).getNumber(NumberFormat.Int32LE, 0);
         }
         return value;
-<<<<<<< HEAD
-    }
-
-} // namespace dynamixel
-=======
     }    
 } // namespace dynamixel
->>>>>>> master

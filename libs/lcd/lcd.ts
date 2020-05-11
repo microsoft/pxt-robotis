@@ -47,6 +47,7 @@ namespace lcd{
     //% blockGap=8
     export function drawTextDisplay(text: string){
         if(!text) return;
+
     }
 
     /**
