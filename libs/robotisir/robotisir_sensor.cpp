@@ -1,5 +1,5 @@
 #include "pxt.h"
-#include "ir_timer.h"
+#include "robotisir_timer.h"
 #include "NRFLowLevelTimer.h"
 
 enum class direction {

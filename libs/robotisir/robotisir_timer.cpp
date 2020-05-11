@@ -19,7 +19,7 @@
   */
 #include "pxt.h"
 #include "Timer.h"
-#include "ir_timer.h"
+#include "robotisir_timer.h"
 #include "NRFLowLevelTimer.h"
 
 

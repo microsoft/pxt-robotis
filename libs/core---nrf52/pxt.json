@@ -9,6 +9,6 @@
         "serial": "file:../serial",
         "mixer---nrf52": "file:../mixer---nrf52",
         "dynamixel": "file:../dynamixel",
-        "irsensor": "file:../irsensor"
+        "robotisir": "file:../robotisir"
     }
 }

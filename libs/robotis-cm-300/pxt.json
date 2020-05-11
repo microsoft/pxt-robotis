@@ -17,7 +17,7 @@
         "dynamixel": "file:../dynamixel",
         "accelerometer": "file:../accelerometer",
         "game": "file:../game",
-        "irsensor": "file:../irsensor"
+        "robotisir": "file:../robotisir"
     },
     "public": true,
     "dalDTS": {

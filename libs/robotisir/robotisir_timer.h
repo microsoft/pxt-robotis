@@ -14,7 +14,7 @@
 * limitations under the License.
 *******************************************************************************/
 
-#ifndef IR_TIMER_H
+#ifndef ROBOTISIR_TIMER_H
 #define IR_TIMER_H
 
 #include "pxt.h"

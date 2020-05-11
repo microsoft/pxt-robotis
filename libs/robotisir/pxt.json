@@ -6,9 +6,9 @@
     },
     "files": [
         "README.md",
-        "ir_sensor.cpp",
-        "ir_timer.cpp",
-        "ir_timer.h",
+        "robotisir_sensor.cpp",
+        "robotisir_timer.cpp",
+        "robotisir_timer.h",
         "enums.d.ts",
         "shims.d.ts"
     ],
