@@ -1,0 +1,16 @@
+{
+    "name": "RobotisIR",
+    "description": "A RobotisIR driver",
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52"
+    },
+    "files": [
+        "README.md",
+        "robotisir_sensor.cpp",
+        "robotisir_timer.cpp",
+        "robotisir_timer.h",
+        "enums.d.ts",
+        "shims.d.ts"
+    ],
+    "public": true
+}

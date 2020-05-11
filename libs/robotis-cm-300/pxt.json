@@ -16,7 +16,8 @@
         "serial": "file:../serial",
         "dynamixel": "file:../dynamixel",
         "accelerometer": "file:../accelerometer",
-        "game": "file:../game"
+        "game": "file:../game",
+        "robotisir": "file:../robotisir"
     },
     "public": true,
     "dalDTS": {

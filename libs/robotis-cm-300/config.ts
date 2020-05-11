@@ -10,6 +10,16 @@ namespace config {
     export const PIN_ACCELEROMETER_SCL = DAL.P1_9;
     export const PIN_ACCELEROMETER_SDA = DAL.P0_11;
     export const PIN_ACCELEROMETER_INT = DAL.P0_5;
+    
+    //Robotis irsensor
+    export const PIN_A5 = DAL.P0_29;
+    export const PIN_A3 = DAL.P0_3;
+    export const PIN_A6 = DAL.P0_30;
+    export const PIN_A0 = DAL.P0_2;
+    export const PIN_A4 = DAL.P0_28;
+    export const PIN_D9 = DAL.P0_9;
+    export const PIN_D12 = DAL.P1_12;
+    export const PIN_D11 = DAL.P1_11;
 
     //Actuators
 
