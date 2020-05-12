@@ -20,8 +20,23 @@ namespace dynamixel {
         }
         return dxlDevice;
     }
-} // namespace dynamixel
 
+    /**
+    */
+    //%
+    void __setPosition(int id, int angle)
+    {
+
+    }
+
+    /**
+    */
+    //%
+    void __setVelocity(int id, int velocity)
+    {
+
+    }
+} // namespace dynamixel
 
 namespace DynamixelDeviceMethods {
 

@@ -7,12 +7,14 @@ namespace pxsim {
 
     export function pinByName(name: string) {
         let v = pinIds[name]
+        console.log("### pinByName : " + v + " / " + name);
         if (v == null) {
             v = getConfig(getConfigKey("PIN_" + name))
+            console.log("### pinByName v null : " + v + " / " + name);
         }
         let p = pxtcore.getPin(v)
         if (!p)
-            console.error("missing pin: " + name + "(" + v + ")")
+            console.error("### missing pin: " + name + "(" + v + ")")
         return p
     }
 
@@ -46,12 +48,16 @@ namespace pxsim {
         jacdacState: JacDacState;
         thermometerState: AnalogSensorState;
         thermometerUnitState: TemperatureUnit;
+        irsensorState: IrsensorState;
         microphoneState: AnalogSensorState;
         screenState: ScreenState;
         irState: InfraredState;
         lcdState: LCDState;
         radioState: RadioState;
+        lightRgbState: LightRgbState;
         dynamixelState: DynamixelState;
+        dxlState: DxlState;
+        dxlState_2: DxlState;
 
         constructor(public boardDefinition: BoardDefinition) {
             super();
@@ -111,6 +117,7 @@ namespace pxsim {
             this.lightSensorState = new AnalogSensorState(DAL.DEVICE_ID_LIGHT_SENSOR, 0, 255, 128 / 4, 896 / 4);
             this.thermometerState = new AnalogSensorState(DAL.DEVICE_ID_THERMOMETER, -20, 50, 10, 30);
             this.thermometerUnitState = TemperatureUnit.Celsius;
+            this.irsensorState = new IrsensorState();
             this.irState = new InfraredState();
             this.lcdState = new LCDState();
             this.dynamixelState = new DynamixelState();
@@ -134,26 +141,28 @@ namespace pxsim {
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
             this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);;
-            this.builtinParts["screen"] = this.screenState = new ScreenState([]);
+            // this.builtinParts["screen"] = this.screenState = new ScreenState([]);
+            // this.builtinParts["screen"] = this.screenState = new ScreenState(paletteSrc, 128, 64);
+            this.builtinParts["screen"] = this.screenState = new ScreenState([], 160, 120);
 
             this.builtinVisuals["buttons"] = () => new visuals.ButtonView();
             this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
 
-            this.builtinParts["neopixel"] = (pin: Pin) => { return this.neopixelState(pin.id); };
-            this.builtinVisuals["neopixel"] = () => new visuals.NeoPixelView(parsePinString);
-            this.builtinPartVisuals["neopixel"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
+            // this.builtinParts["neopixel"] = (pin: Pin) => { return this.neopixelState(pin.id); };
+            // this.builtinVisuals["neopixel"] = () => new visuals.NeoPixelView(parsePinString);
+            // this.builtinPartVisuals["neopixel"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
 
-            this.builtinParts["dotstar"] = (pin: Pin) => { return this.neopixelState(pin.id); };
-            this.builtinVisuals["dotstar"] = () => new visuals.NeoPixelView(parsePinString);
-            this.builtinPartVisuals["dotstar"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
+            // this.builtinParts["dotstar"] = (pin: Pin) => { return this.neopixelState(pin.id); };
+            // this.builtinVisuals["dotstar"] = () => new visuals.NeoPixelView(parsePinString);
+            // this.builtinPartVisuals["dotstar"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
 
             this.builtinParts["lcd"] =  this.lcdState;
             this.builtinVisuals["lcd"] = () => new visuals.LCDView();
             this.builtinPartVisuals["lcd"] = (xy: visuals.Coord) => visuals.mkLCDPart(xy);
             
-            this.builtinParts["pixels"] = (pin: Pin) => { return this.neopixelState(undefined); };
-            this.builtinVisuals["pixels"] = () => new visuals.NeoPixelView(parsePinString);
-            this.builtinPartVisuals["pixels"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
+            // this.builtinParts["pixels"] = (pin: Pin) => { return this.neopixelState(undefined); };
+            // this.builtinVisuals["pixels"] = () => new visuals.NeoPixelView(parsePinString);
+            // this.builtinPartVisuals["pixels"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);
 
             this.builtinPartVisuals["buttons"] = (xy: visuals.Coord) => visuals.mkBtnSvg(xy);
 
@@ -173,11 +182,16 @@ namespace pxsim {
             this.builtinVisuals["screen"] = () => new visuals.ScreenView();
             this.builtinPartVisuals["screen"] = (xy: visuals.Coord) => visuals.mkScreenPart(xy);
 
+            this.builtinParts["lightRgb"] = this.lightRgbState = new LightRgbState();
+
+            this.builtinParts["hole"] = this.dxlState = new DxlState(1, 0);
+            this.builtinParts["hole-7"] = this.dxlState_2 = new DxlState(2,0);
             
             const neopixelPinCfg = getConfig(DAL.CFG_PIN_NEOPIXEL) ||
                 getConfig(DAL.CFG_PIN_DOTSTAR_DATA);
-            if (neopixelPinCfg !== null)
+            if (neopixelPinCfg !== null) {
                 this.neopixelPin = this.edgeConnectorState.getPin(neopixelPinCfg);
+            }
         }
 
         receiveMessage(msg: SimulatorMessage) {
@@ -205,6 +219,14 @@ namespace pxsim {
             AudioContextManager.stop();
         }
 
+
+        getDxl(): DxlState{
+            return this.dxlState;
+        }
+        getDxl_2(): DxlState{
+            return this.dxlState_2;
+        }
+        
         initAsync(msg: SimulatorRunMessage): Promise<void> {
             super.initAsync(msg);
 
@@ -284,4 +306,9 @@ namespace pxsim {
         const pinName = pinString && pxsim.readPin(pinString);
         return pinName && pxtcore.getPin(pinIds[pinName]);
     }
+
+    export function currentboard(): DalBoard {
+        return runtime.board as DalBoard;
+    }
 }
+

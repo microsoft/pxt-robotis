@@ -1,0 +1,19 @@
+{
+    "name": "irsensor",
+    "description": "A irsensor driver",
+    "files": [
+        "README.md",
+        "irsensor.cpp",
+        "target_temperature.h",
+        "shims.d.ts",
+        "enums.d.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "jacdac": "file:../jacdac"
+    }
+}
