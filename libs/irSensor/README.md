@@ -1,4 +1,4 @@
-# irSensor
+# irsensor
 
-The irSensor library.
+The irsensor library.
 

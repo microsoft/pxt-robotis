@@ -1,9 +1,9 @@
 {
-    "name": "irSensor",
-    "description": "A irSensor driver",
+    "name": "irsensor",
+    "description": "A irsensor driver",
     "files": [
         "README.md",
-        "irSensor.cpp",
+        "irsensor.cpp",
         "target_temperature.h",
         "shims.d.ts",
         "enums.d.ts"

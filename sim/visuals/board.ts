@@ -606,9 +606,9 @@ namespace pxsim.visuals {
         private thermometerGradient: SVGLinearGradientElement;
         private thermometer: SVGRectElement;
         private thermometerText: SVGTextElement;
-        private irSensorGradient: SVGLinearGradientElement[];
-        private irSensor: SVGRectElement[];
-        private irSensorText: SVGTextElement[];
+        private irsensorGradient: SVGLinearGradientElement[];
+        private irsensor: SVGRectElement[];
+        private irsensorText: SVGTextElement[];
         private shakeButtonGroup: SVGElement;
         private shakeText: SVGTextElement;
         private screenCanvas: HTMLCanvasElement;
@@ -620,9 +620,9 @@ namespace pxsim.visuals {
 
         constructor(public props: IBoardProps) {
             this.onBoardLeds = [];
-            this.irSensorGradient = [];
-            this.irSensor = [];
-            this.irSensorText = [];
+            this.irsensorGradient = [];
+            this.irsensor = [];
+            this.irsensorText = [];
             this.onDxls = [];
 
             this.fixPinIds();
@@ -728,8 +728,8 @@ namespace pxsim.visuals {
             svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
 
             svg.setGradientColors(this.thermometerGradient, theme.ledOff, theme.ledOn);
-            for (let i = 0; i < this.irSensorGradient.length; i++) {
-                svg.setGradientColors(this.irSensorGradient[i], "#FFFFFF", "#5D67B7");   
+            for (let i = 0; i < this.irsensorGradient.length; i++) {
+                svg.setGradientColors(this.irsensorGradient[i], "#FFFFFF", "#5D67B7");   
             }
         }
 
@@ -754,11 +754,11 @@ namespace pxsim.visuals {
             this.updateSound();
             this.updateLightLevel();
             this.updateTemperature();
-            this.updateIrSensor(0, 40, 300);
-            this.updateIrSensor(1, 150, 300);
-            this.updateIrSensor(2, 190, 300);
-            this.updateIrSensor(3, 230, 300);
-            this.updateIrSensor(4, 345, 300);
+            this.updateirsensor(0, 40, 300);
+            this.updateirsensor(1, 150, 300);
+            this.updateirsensor(2, 190, 300);
+            this.updateirsensor(3, 230, 300);
+            this.updateirsensor(4, 345, 300);
 
             if (!runtime || runtime.dead) U.addClass(this.element, "grayscale");
             else U.removeClass(this.element, "grayscale");
@@ -996,19 +996,19 @@ namespace pxsim.visuals {
             accessibility.setLiveContent(t + unit);
         }
 
-        private updateIrSensor(irId: number, irX: number, irY: number) {
+        private updateirsensor(irId: number, irX: number, irY: number) {
             let state = this.board;
-            // console.log("### updateIr state : " + state + " / " + state.irSensorState + " / " + state.thermometerState.sensorUsed);
-            if (!state || !state.irSensorState || !state.irSensorState.sensorUsed) return;
+            // console.log("### updateIr state : " + state + " / " + state.irsensorState + " / " + state.thermometerState.sensorUsed);
+            if (!state || !state.irsensorState || !state.irsensorState.sensorUsed) return;
 
-            // min, max 값은 dalboard.ts 의 irSensorState 에서도 설정됨.
+            // min, max 값은 dalboard.ts 의 irsensorState 에서도 설정됨.
             let tmin = 0;
             let tmax = 100;
-            if (!this.irSensor[irId]) {
-                let gid = "gradient-irSensor" + irId;
-                this.irSensorGradient[irId] = svg.linearGradient(this.defs, gid);
-                this.irSensor[irId] = <SVGRectElement>svg.child(this.g, "rect", {
-                    class: "sim-irSensor" + irId + " no-drag",
+            if (!this.irsensor[irId]) {
+                let gid = "gradient-irsensor" + irId;
+                this.irsensorGradient[irId] = svg.linearGradient(this.defs, gid);
+                this.irsensor[irId] = <SVGRectElement>svg.child(this.g, "rect", {
+                    class: "sim-irsensor" + irId + " no-drag",
                     x: irX,
                     y: irY,
                     width: 15,
@@ -1016,18 +1016,18 @@ namespace pxsim.visuals {
                     rx: 2, ry: 2,
                     fill: `url(#${gid})`
                 });
-                // this.irSensorText[irIndex] = svg.child(this.g, "text", { class: 'sim-text-white', x: 35 * (irIndex + 1), y: 290 }) as SVGTextElement;
-                this.irSensorText[irId] = svg.child(this.g, "text", { class: 'sim-text-white', x: this.irSensor[irId].x.baseVal.value, y: 290 }) as SVGTextElement;
+                // this.irsensorText[irIndex] = svg.child(this.g, "text", { class: 'sim-text-white', x: 35 * (irIndex + 1), y: 290 }) as SVGTextElement;
+                this.irsensorText[irId] = svg.child(this.g, "text", { class: 'sim-text-white', x: this.irsensor[irId].x.baseVal.value, y: 290 }) as SVGTextElement;
                 this.updateTheme();
 
                 let pt = this.element.createSVGPoint();
-                svg.buttonEvents(this.irSensor[irId],
+                svg.buttonEvents(this.irsensor[irId],
                     // move
                     (ev) => {
                         let cur = svg.cursorPoint(pt, this.element, ev);
                         let t = Math.max(0, Math.min(1, (350 - cur.y) / 50)) // (y + height - cur.y) / height
-                        state.irSensorState.setLevel(irId, Math.floor(tmin + t * (tmax - tmin)));
-                        this.updateIrSensor(irId, irX, irY);
+                        state.irsensorState.setLevel(irId, Math.floor(tmin + t * (tmax - tmin)));
+                        this.updateirsensor(irId, irX, irY);
                     },
                     // start
                     ev => { },
@@ -1037,35 +1037,35 @@ namespace pxsim.visuals {
                     (ev) => {
                         let charCode = (typeof ev.which == "number") ? ev.which : ev.keyCode
                         if (charCode === 40 || charCode === 37) { // Down/Left arrow
-                            if (state.irSensorState.getLevel(irId) === 0) {
-                                state.irSensorState.setLevel(irId, 100);
+                            if (state.irsensorState.getLevel(irId) === 0) {
+                                state.irsensorState.setLevel(irId, 100);
                             } else {
-                                state.irSensorState.setLevel(irId, state.irSensorState.getLevel(irId) - 1);
+                                state.irsensorState.setLevel(irId, state.irsensorState.getLevel(irId) - 1);
                             }
-                            this.updateIrSensor(irId, irX, irY);
+                            this.updateirsensor(irId, irX, irY);
                         } else if (charCode === 38 || charCode === 39) { // Up/Right arrow
-                            if (state.irSensorState.getLevel(irId) === 100) {
-                                state.irSensorState.setLevel(irId, 0);
+                            if (state.irsensorState.getLevel(irId) === 100) {
+                                state.irsensorState.setLevel(irId, 0);
                             } else {
-                                state.irSensorState.setLevel(irId, state.irSensorState.getLevel(irId) + 1);
+                                state.irsensorState.setLevel(irId, state.irsensorState.getLevel(irId) + 1);
                             }
-                            this.updateIrSensor(irId, irX, irY);
+                            this.updateirsensor(irId, irX, irY);
                         }
                     });
 
-                accessibility.makeFocusable(this.irSensor[irId]);
-                accessibility.setAria(this.irSensor[irId], "slider", "irSensor" + irId);
-                this.irSensor[irId].setAttribute("aria-valuemin", tmin.toString());
-                this.irSensor[irId].setAttribute("aria-valuemax", tmax.toString());
-                this.irSensor[irId].setAttribute("aria-orientation", "vertical");
+                accessibility.makeFocusable(this.irsensor[irId]);
+                accessibility.setAria(this.irsensor[irId], "slider", "irsensor" + irId);
+                this.irsensor[irId].setAttribute("aria-valuemin", tmin.toString());
+                this.irsensor[irId].setAttribute("aria-valuemax", tmax.toString());
+                this.irsensor[irId].setAttribute("aria-orientation", "vertical");
             }
 
-            let t = Math.max(tmin, Math.min(tmax, state.irSensorState.getLevel(irId)))
-            let per = Math.floor((state.irSensorState.getLevel(irId) - tmin) / (tmax - tmin) * 100)
-            svg.setGradientValue(this.irSensorGradient[irId], 100 - per + "%");
+            let t = Math.max(tmin, Math.min(tmax, state.irsensorState.getLevel(irId)))
+            let per = Math.floor((state.irsensorState.getLevel(irId) - tmin) / (tmax - tmin) * 100)
+            svg.setGradientValue(this.irsensorGradient[irId], 100 - per + "%");
 
-            this.irSensorText[irId].textContent = t.toString();
-            this.irSensor[irId].setAttribute("aria-valuenow", t.toString());
+            this.irsensorText[irId].textContent = t.toString();
+            this.irsensor[irId].setAttribute("aria-valuenow", t.toString());
             accessibility.setLiveContent(t.toString());
         }
 
