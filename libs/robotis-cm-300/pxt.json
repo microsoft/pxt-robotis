@@ -6,7 +6,8 @@
         "device.d.ts",
         "config.ts",
         "board.json",
-        "board.svg"
+        "board.svg",
+        "ns.ts"
     ],
     "core": true,
     "compileServiceVariant": "cm300",
@@ -14,16 +15,22 @@
         "core---nrf52": "file:../core---nrf52",
         "buttons": "file:../buttons",
         "serial": "file:../serial",
-        "dynamixel": "file:../dynamixel",
+        "screen---st7735": "file:../screen---st7735",
         "accelerometer": "file:../accelerometer",
-        "irsensor": "file:../irsensor",
-        "game": "file:../game"
+        "mixer---nrf52": "file:../mixer---nrf52",
+        "communication": "file:../communication",
+        "lcd": "file:../lcd",
+        "robotis_input": "file:../robotis_input",
+        "robotis_output": "file:../robotis_output",
+        "robotis_control": "file:../robotis_control",
+        "robotis_event": "file:../robotis_event",
+        "irSensor": "file:../irSensor",
+        "dynamixel": "file:../dynamixel"
     },
     "public": true,
     "dalDTS": {
         "corePackage": "../core---nrf52"
     },    
     "features": [  
-
     ]
 }

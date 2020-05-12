@@ -35,8 +35,14 @@
         "libs/radio",
         "libs/radio-broadcast",
         "libs/dynamixel",
-        "libs/irsensor",
-        "libs/robotis-cm-300"
+        "libs/robotis-cm-300",
+        "libs/lcd",
+        "libs/communication",
+        "libs/robotis_input",
+        "libs/robotis_output",
+        "libs/robotis_control",
+        "libs/robotis_event",
+        "libs/irSensor"
     ],
     "serial": {
         "useHF2": true,
@@ -77,7 +83,7 @@
     },
     "runtime": {
         "mathBlocks": true,
-        "loopsBlocks": true,
+        "loopsBlocks": false,
         "logicBlocks": true,
         "variablesBlocks": true,
         "textBlocks": true,
@@ -87,8 +93,8 @@
             "useNewFunctions": true,
             "extraFunctionEditorTypes": []
         },
-        "onStartNamespace": "loops",
-        "onStartColor": "#40bf4a",
+        "onStartNamespace": "event",
+        "onStartColor": "#68C3E2",
         "onStartWeight": 100,
         "pauseUntilBlock": {},
         "breakBlock": true,

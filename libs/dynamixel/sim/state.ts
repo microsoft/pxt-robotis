@@ -55,14 +55,12 @@ namespace pxsim {
 
         /**
          */
-        //% shim=dynamixel::__setPosition
         setPosition(id:number, position: number): void{
             
         }
 
         /**
          */
-        //% shim=dynamixel::__setVelocity
         setVelocity(id:number, velocity: number): void{
             
         }

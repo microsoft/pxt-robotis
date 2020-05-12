@@ -1,0 +1,12 @@
+{
+    "name": "lcd",
+    "description": "ROBOTIS CM-300 - lcd",
+    "files": [
+        "lcd.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52"
+    },
+    "hidden": true
+}

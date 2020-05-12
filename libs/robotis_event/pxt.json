@@ -1,0 +1,12 @@
+{
+    "name": "robotis_event",
+    "description": "ROBOTIS CM-300 - event",
+    "files": [
+        "event.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52"
+    },
+    "hidden": true
+}

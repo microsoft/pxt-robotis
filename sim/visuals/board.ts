@@ -750,7 +750,7 @@ namespace pxsim.visuals {
             this.onDxls.forEach(l => l.updateState());
 
             this.updateGestures();
-
+            
             this.updateSound();
             this.updateLightLevel();
             this.updateTemperature();
@@ -1173,10 +1173,11 @@ namespace pxsim.visuals {
                     led.height.baseVal.value || 8)
                             this.onBoardLeds.push(bl)
                             el.appendChild(bl.element)
-            }            
-
+            }         
+            
+            //다이나믹셀
             const dynmixels = ["hole", "hole-7"];
-
+            
             for (let i = 0; i < dynmixels.length; i++) {
                 const dxl = this.element.getElementById(dynmixels[i]) as SVGRectElement;
                 const el = this.getView().el;
@@ -1184,7 +1185,6 @@ namespace pxsim.visuals {
                 this.onDxls.push(bl);
                 el.appendChild(dxl);
             }
-
             this.screenCanvas = document.createElement("canvas");
         }
 

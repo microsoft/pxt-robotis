@@ -15,5 +15,6 @@
     "dependencies": {
         "core---nrf52": "file:../core---nrf52",
         "serial": "file:../serial"
-    }
+    },
+    "hidden": true
 }

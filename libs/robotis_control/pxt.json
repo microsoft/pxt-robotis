@@ -1,0 +1,12 @@
+{
+    "name": "robotis_control",
+    "description": "ROBOTIS CM-300 - control",
+    "files": [
+        "control.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52"
+    },
+    "hidden": true
+}

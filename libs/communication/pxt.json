@@ -1,0 +1,12 @@
+{
+    "name": "communication",
+    "description": "ROBOTIS CM-300 - communication",
+    "files": [
+        "communication.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core---nrf52": "file:../core---nrf52"
+    },
+    "hidden": true
+}

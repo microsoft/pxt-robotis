@@ -219,7 +219,6 @@ namespace pxsim {
             AudioContextManager.stop();
         }
 
-
         getDxl(): DxlState{
             return this.dxlState;
         }
